@@ -641,6 +641,116 @@
           "steps": []
         }
       ]
+    },
+        {
+      "id": "man_6s60me_c",
+      "categoryId": "main_engine",
+      "manufacturer": "MAN B&W",
+      "model": "6S60ME-C",
+      "type": "ME-C (Electronic)",
+      "overview": {
+        "mcr": "13560 kW @ 105 rpm",
+        "bore": "600 mm",
+        "stroke": "2400 mm",
+        "firingOrder": "1-5-3-4-2-6"
+      },
+      "procedures": [
+        {
+          "id": "cylinder_cover",
+          "name": "Cylinder Cover",
+          "parts": [
+            { "name": "Cylinder cover, complete", "action": "info", "criteria": "Weight: 1200 kg" },
+            { "name": "Cylinder cover without valves", "action": "info", "criteria": "Weight: 1090 kg" },
+            { "name": "Cooling jacket", "action": "info", "criteria": "Weight: 40 kg" },
+            { "name": "Exhaust valve stud", "action": "info", "criteria": "Weight: 8 kg" },
+            { "name": "Cylinder cover stud", "action": "info", "criteria": "Weight: 28 kg" }
+          ],
+          "clearances": [
+            { "name": "Cylinder cover stud, check distance", "min": "126", "max": "132", "unit": "mm", "note": "Data T22-44" }
+          ],
+          "torques": [
+            { "name": "Exhaust valve stud, screwing-in", "value": "680", "unit": "Nm", "note": "Data T22-45" },
+            { "name": "Starting valve stud, screwing-in", "value": "145", "unit": "Nm", "note": "Data T22-51" },
+            { "name": "Cylinder cover stud (in frame)", "value": "200", "unit": "Nm", "note": "Thread M48" }
+          ],
+          "steps": []
+        },
+        {
+          "id": "piston",
+          "name": "Piston & Rings",
+          "parts": [
+            { "name": "Piston rings", "action": "replace", "criteria": "Recommended whenever piston is removed" }
+          ],
+          "clearances": [
+            { "name": "Max. recommended ring groove clearance (80/90 bore)", "min": "-", "max": "1.0", "unit": "mm", "note": "Source: Riviera Maritime Media" },
+            { "name": "Max. hot corrosion on piston top centre (80/90 bore)", "min": "-", "max": "9 / 12", "unit": "mm", "note": "For 80 and 90 bore respectively" }
+          ],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "piston_rod_stuffing_box",
+          "name": "Piston Rod Stuffing Box",
+          "parts": [],
+          "clearances": [],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "crosshead",
+          "name": "Crosshead & Guides",
+          "parts": [],
+          "clearances": [
+            { "name": "Crosshead bearing, top clearance max.", "min": "-", "max": "0.5", "unit": "mm", "note": "Data T25-12" },
+            { "name": "Crosshead bearing, top clearance min.", "min": "0.15", "max": "-", "unit": "mm", "note": "Data T25-13" }
+          ],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "crankpin_bearing",
+          "name": "Crankpin Bearing",
+          "parts": [],
+          "clearances": [],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "connecting_rod",
+          "name": "Connecting Rod",
+          "parts": [],
+          "clearances": [],
+          "torques": [
+            { "name": "Connecting rod stud, pretension", "value": "2120", "unit": "Nm", "note": "Elongation: 0.28–0.32 mm. Replace if elongation > 0.35 mm" }
+          ],
+          "steps": []
+        },
+        {
+          "id": "main_bearing",
+          "name": "Main Bearing",
+          "parts": [
+            { "name": "Main bearing cap", "action": "info", "criteria": "Weight: 2 x 600 kg" },
+            { "name": "Main bearing shell, upper", "action": "info", "criteria": "Weight: 177 kg" },
+            { "name": "Main bearing shell, lower", "action": "info", "criteria": "Weight: 177 kg" }
+          ],
+          "clearances": [
+            { "name": "Main bearing, top clearance max.", "min": "-", "max": "0.45", "unit": "mm", "note": "Data D05-01" },
+            { "name": "Main bearing, top clearance min.", "min": "0.20", "max": "-", "unit": "mm", "note": "Data D05-02" }
+          ],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "cylinder_liner",
+          "name": "Cylinder Liner",
+          "parts": [],
+          "clearances": [
+            { "name": "Liner wear limit (0.6–0.8% of bore)", "min": "3.6", "max": "4.8", "unit": "mm", "note": "For 600 mm bore" }
+          ],
+          "torques": [],
+          "steps": []
+        }
+      ]
     }
   ]
 }
