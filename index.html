@@ -56,7 +56,36 @@
         <button id="btn-save-equipment" class="btn-primary">Confirm Selection</button>
       </div>
     </section>
+        <!-- ЭКРАН 3: MY WATCH -->
+    <section id="screen-watch" class="screen">
+      <header class="screen-header">
+        <div>
+          <h2 class="screen-title">My Watch</h2>
+          <p class="subtitle">Your equipment</p>
+        </div>
+        <button id="btn-reset" class="btn-icon" title="Reset App">↺</button>
+      </header>
+
+      <div class="search-container">
+        <input type="text" id="search-watch" class="search-input" placeholder="Search equipment...">
+      </div>
+      
+      <div id="watch-list" class="equipment-list" style="padding-bottom: 100px;">
+        <!-- Сюда JS вставит карточки выбранного оборудования -->
+      </div>
+    </section>
   </main>
+    <!-- НИЖНЕЕ МЕНЮ НАВИГАЦИИ (появляется только в главных экранах) -->
+  <nav id="bottom-nav" class="bottom-nav" style="display: none;">
+    <button class="nav-btn active" data-target="screen-watch">
+      <span class="nav-icon">◈</span>
+      <span class="nav-label">My Watch</span>
+    </button>
+    <button class="nav-btn" data-target="screen-library">
+      <span class="nav-icon">≡</span>
+      <span class="nav-label">Library</span>
+    </button>
+  </nav>
   <script src="app.js"></script>
 </body>
 </html>
