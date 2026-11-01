@@ -458,6 +458,123 @@
           "steps": []
         }
       ]
+},
+    {
+      "id": "man_6s50mc_c",
+      "categoryId": "main_engine",
+      "manufacturer": "MAN B&W",
+      "model": "6S50MC-C",
+      "type": "MC-C",
+      "overview": {
+        "mcr": "9480 kW @ 127 rpm",
+        "bore": "500 mm",
+        "stroke": "2000 mm",
+        "firingOrder": "1-5-3-4-2-6"
+      },
+      "procedures": [
+        {
+          "id": "cylinder_cover",
+          "name": "Cylinder Cover",
+          "parts": [
+            { "name": "Exhaust valve stud", "action": "info", "criteria": "Screwing-in torque: 450 Nm" },
+            { "name": "Starting valve stud", "action": "info", "criteria": "Screwing-in torque: 140 Nm" },
+            { "name": "Fuel valve stud", "action": "info", "criteria": "Screwing-in torque: 140 Nm" }
+          ],
+          "clearances": [
+            { "name": "Cylinder cover stud, check distance", "min": "183", "max": "184", "unit": "mm" }
+          ],
+          "torques": [
+            { "name": "Cylinder cover stud (in frame)", "value": "200", "unit": "Nm", "note": "M48 thread" },
+            { "name": "Hydraulic pressure, mounting", "value": "1500", "unit": "bar" },
+            { "name": "Hydraulic pressure, dismantling", "value": "1500-1650", "unit": "bar" }
+          ],
+          "steps": []
+        },
+        {
+          "id": "piston",
+          "name": "Piston & Rings",
+          "parts": [
+            { "name": "Piston rings", "action": "replace", "criteria": "Recommended whenever piston is removed" }
+          ],
+          "clearances": [
+            { "name": "Ring groove clearance, max. (all rings)", "min": "-", "max": "1.0", "unit": "mm", "note": "Source: Riviera Maritime Media" },
+            { "name": "Ring groove No.1 nominal height", "min": "12.7", "max": "12.7", "unit": "mm" },
+            { "name": "Ring groove No.2 nominal height", "min": "9.7", "max": "9.7", "unit": "mm" }
+          ],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "stuffing_box",
+          "name": "Piston Rod Stuffing Box",
+          "parts": [
+            { "name": "Stuffing box complete", "action": "info", "criteria": "Weight: 109 kg" },
+            { "name": "Stuffing box half", "action": "info", "criteria": "Weight: 35 kg" }
+          ],
+          "clearances": [],
+          "torques": [
+            { "name": "Stuffing box valve, tightening", "value": "80", "unit": "Nm" },
+            { "name": "Stuffing box flange, tightening", "value": "80", "unit": "Nm" },
+            { "name": "Stuffing box flange, inner screws", "value": "80", "unit": "Nm" }
+          ],
+          "steps": []
+        },
+        {
+          "id": "crosshead",
+          "name": "Crosshead & Guides",
+          "parts": [
+            { "name": "Crosshead bearing cap", "action": "info", "criteria": "Weight: 170 kg" },
+            { "name": "Crosshead + piston assembly", "action": "info", "criteria": "Weight: 1400 kg" },
+            { "name": "Bearing shell (lower)", "action": "info", "criteria": "Weight: 30 kg" }
+          ],
+          "clearances": [
+            { "name": "Crosshead bearing, top clearance max.", "min": "-", "max": "0.55", "unit": "mm" },
+            { "name": "Crosshead bearing, top clearance min.", "min": "0.20", "max": "-", "unit": "mm" },
+            { "name": "Oil wedge length, L", "min": "10", "max": "-", "unit": "mm" }
+          ],
+          "torques": [
+            { "name": "Piston rod/crosshead, tightening", "value": "430", "unit": "Nm" }
+          ],
+          "steps": []
+        },
+        {
+          "id": "crankpin_bearing",
+          "name": "Crankpin Bearing",
+          "parts": [],
+          "clearances": [],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "connecting_rod",
+          "name": "Connecting Rod",
+          "parts": [],
+          "clearances": [],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "main_bearing",
+          "name": "Main Bearing",
+          "parts": [],
+          "clearances": [
+            { "name": "Crankshaft deflection, first & last cylinder", "min": "-", "max": "0.46", "unit": "mm" },
+            { "name": "Crankshaft deflection, other cylinders", "min": "-", "max": "0.18", "unit": "mm" }
+          ],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "cylinder_liner",
+          "name": "Cylinder Liner",
+          "parts": [],
+          "clearances": [
+            { "name": "Liner wear, max.", "min": "-", "max": "0.8% of bore (4.0 mm)", "unit": "mm", "note": "Typical wear limit; normal wear rate 0.01–0.03 mm/1000h" }
+          ],
+          "torques": [],
+          "steps": []
+        }
+      ]
     }
   ]
 }
