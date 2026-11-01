@@ -626,3 +626,15 @@ h1 {
   font-weight: 600;
 }
 .cat-group-header:first-child { padding-top: 0; }
+
+/* ===== CATEGORY CARD WITH SELECTION COUNTER ===== */
+.cat-select-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cat-select-badge.has-selection {
+  color: var(--accent-start);
+}

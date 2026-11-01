@@ -45,20 +45,33 @@
         </button>
       </div>
     </section>
-        <!-- ЭКРАН 2: ВЫБОР ОБОРУДОВАНИЯ -->
+    <!-- ЭКРАН 2А: ВЫБОР ОБОРУДОВАНИЯ — КАТЕГОРИИ -->
     <section id="screen-equipment" class="screen">
       <header class="onboarding-header" style="margin-top: 20px; margin-bottom: 24px;">
         <h2 class="screen-title">Your Watch</h2>
         <p class="subtitle">Select your equipment</p>
       </header>
       
-      <div id="equipment-list" class="equipment-list">
-        <!-- Сюда JS будет вставлять карточки -->
+      <div id="equipment-categories" class="equipment-list">
+        <!-- Сюда JS будет вставлять карточки категорий -->
       </div>
 
-      <!-- Кнопка внизу экрана -->
       <div class="bottom-action">
         <button id="btn-save-equipment" class="btn-primary">Confirm Selection</button>
+      </div>
+    </section>
+
+    <!-- ЭКРАН 2Б: ВЫБОР ОБОРУДОВАНИЯ — МОДЕЛИ В КАТЕГОРИИ -->
+    <section id="screen-equipment-models" class="screen">
+      <header class="screen-header" style="margin-bottom: 12px;">
+        <button class="btn-back" onclick="equipmentBack()">← Back</button>
+      </header>
+      <h2 id="equipment-models-title" class="screen-title" style="font-size:28px; margin-bottom:20px;"></h2>
+      <div id="equipment-models-list" class="equipment-list" style="padding-bottom: 120px;">
+        <!-- Сюда JS будет вставлять карточки моделей -->
+      </div>
+      <div class="bottom-action">
+        <button id="btn-save-equipment-models" class="btn-primary">Confirm Selection</button>
       </div>
     </section>
         <!-- ЭКРАН 3: MY WATCH -->

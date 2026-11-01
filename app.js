@@ -33,33 +33,114 @@ function showScreen(screenId) {
   window.scrollTo(0, 0);
 }
 
-// 3. Онбординг — плоский список, сгруппированный по категориям
-function renderEquipmentList() {
-  if (!appData) return;
-  const list = document.getElementById('equipment-list');
-  const savedEq = JSON.parse(localStorage.getItem('eg_equipment') || '[]');
-  let html = '';
+// 3. Онбординг — drill-down: категории → модели
+let eqState = { category: null, subtype: null };
 
-  appData.categories.forEach(cat => {
-    const engines = appData.engines.filter(e => e.categoryId === cat.id);
-    if (engines.length === 0) return;
-    html += `<div class="cat-group-header">${cat.name}</div>`;
-    engines.forEach(engine => {
-      const displayName = engine.subtype
-        ? `${engine.manufacturer} ${engine.model} <span style="color:var(--text-dim); font-size:12px;">(${engine.subtype})</span>`
-        : `${engine.manufacturer} ${engine.model}`;
-      const sel = savedEq.includes(engine.id) ? 'selected' : '';
-      html += `
-        <div class="equipment-card ${sel}" data-id="${engine.id}">
-          <div class="eq-info"><span class="eq-name">${displayName}</span></div>
-          <div class="checkbox"></div>
-        </div>`;
-    });
-  });
-  list.innerHTML = html;
-  list.querySelectorAll('.equipment-card').forEach(card => {
-    card.addEventListener('click', () => card.classList.toggle('selected'));
-  });
+function renderEquipmentCategories() {
+  if (!appData) return;
+  const savedEq = JSON.parse(localStorage.getItem('eg_equipment') || '[]');
+  const cats = appData.categories.filter(cat =>
+    appData.engines.some(e => e.categoryId === cat.id)
+  );
+  const list = document.getElementById('equipment-categories');
+  list.innerHTML = cats.map(cat => {
+    const enginesInCat = appData.engines.filter(e => e.categoryId === cat.id);
+    const selectedCount = enginesInCat.filter(e => savedEq.includes(e.id)).length;
+    const badgeClass = selectedCount > 0 ? 'has-selection' : '';
+    return `
+      <div class="category-card" onclick="openEquipmentCategory('${cat.id}')">
+        <div class="cat-info">
+          <span class="cat-name">${cat.name}</span>
+          <span class="cat-select-badge ${badgeClass}">${selectedCount} of ${enginesInCat.length} selected</span>
+        </div>
+        <span class="proc-arrow">→</span>
+      </div>`;
+  }).join('');
+  updateConfirmButtons();
+}
+
+function openEquipmentCategory(catId) {
+  eqState.category = appData.categories.find(c => c.id === catId);
+  eqState.subtype = null;
+  const enginesInCat = appData.engines.filter(e => e.categoryId === catId);
+  const hasSubtypes = enginesInCat.some(e => e.subtype);
+  if (hasSubtypes) renderEquipmentSubtypes();
+  else renderEquipmentModels();
+  showScreen('screen-equipment-models');
+}
+
+function renderEquipmentSubtypes() {
+  const enginesInCat = appData.engines.filter(e => e.categoryId === eqState.category.id);
+  const subtypes = [...new Set(enginesInCat.map(e => e.subtype).filter(Boolean))];
+  document.getElementById('equipment-models-title').textContent = eqState.category.name;
+  document.getElementById('equipment-models-list').innerHTML = subtypes.map(st => {
+    const count = enginesInCat.filter(e => e.subtype === st).length;
+    return `
+      <div class="procedure-card" onclick="openEquipmentSubtype('${st}')">
+        <div>
+          <span class="proc-name">${st}</span>
+          <span style="display:block; font-size:11px; color:var(--text-dim); margin-top:2px;">${count} model${count !== 1 ? 's' : ''}</span>
+        </div>
+        <span class="proc-arrow">→</span>
+      </div>`;
+  }).join('');
+  updateConfirmButtons();
+}
+
+function openEquipmentSubtype(subtype) {
+  eqState.subtype = subtype;
+  renderEquipmentModels();
+}
+
+function renderEquipmentModels() {
+  const savedEq = JSON.parse(localStorage.getItem('eg_equipment') || '[]');
+  let engines = appData.engines.filter(e => e.categoryId === eqState.category.id);
+  if (eqState.subtype) engines = engines.filter(e => e.subtype === eqState.subtype);
+
+  const title = eqState.category.name + (eqState.subtype ? ' • ' + eqState.subtype : '');
+  document.getElementById('equipment-models-title').textContent = title;
+  document.getElementById('equipment-models-list').innerHTML = engines.map(e => {
+    const sel = savedEq.includes(e.id) ? 'selected' : '';
+    return `
+      <div class="equipment-card ${sel}" data-id="${e.id}" onclick="toggleEquipmentModel('${e.id}')">
+        <div class="eq-info">
+          <span class="eq-name">${e.manufacturer} ${e.model}${e.subtype && !eqState.subtype ? ` (${e.subtype})` : ''}</span>
+        </div>
+        <div class="checkbox"></div>
+      </div>`;
+  }).join('');
+  updateConfirmButtons();
+}
+
+function toggleEquipmentModel(engineId) {
+  const savedEq = JSON.parse(localStorage.getItem('eg_equipment') || '[]');
+  const idx = savedEq.indexOf(engineId);
+  if (idx >= 0) savedEq.splice(idx, 1);
+  else savedEq.push(engineId);
+  localStorage.setItem('eg_equipment', JSON.stringify(savedEq));
+  renderEquipmentModels();
+}
+
+function equipmentBack() {
+  if (eqState.subtype) {
+    eqState.subtype = null;
+    renderEquipmentSubtypes();
+  } else {
+    eqState.category = null;
+    renderEquipmentCategories();
+    showScreen('screen-equipment');
+  }
+}
+
+function updateConfirmButtons() {
+  const savedEq = JSON.parse(localStorage.getItem('eg_equipment') || '[]');
+  const label = savedEq.length === 0
+    ? 'Confirm Selection'
+    : `Confirm (${savedEq.length} selected)`;
+  const btn1 = document.getElementById('btn-save-equipment');
+  const btn2 = document.getElementById('btn-save-equipment-models');
+  if (btn1) btn1.textContent = label;
+  if (btn2) btn2.textContent = label;
 }
 
 // 4. My Watch — сгруппировано по категориям
@@ -348,21 +429,23 @@ const roleCards = document.querySelectorAll('.role-card');
 roleCards.forEach(card => {
   card.addEventListener('click', () => {
     localStorage.setItem('eg_role', card.getAttribute('data-role'));
-    renderEquipmentList();
+    renderEquipmentCategories();
     showScreen('screen-equipment');
   });
 });
 
-// 10. Подтверждение выбора
-document.getElementById('btn-save-equipment').addEventListener('click', () => {
-  const selected = [];
-  document.querySelectorAll('#equipment-list .equipment-card.selected').forEach(card => {
-    selected.push(card.dataset.id);
-  });
-  localStorage.setItem('eg_equipment', JSON.stringify(selected));
+// 10. Подтверждение выбора (кнопки на обоих экранах онбординга)
+function confirmEquipmentSelection() {
+  const savedEq = JSON.parse(localStorage.getItem('eg_equipment') || '[]');
+  if (savedEq.length === 0) {
+    alert('Please select at least one piece of equipment.');
+    return;
+  }
   renderMyWatch();
   showScreen('screen-watch');
-});
+}
+document.getElementById('btn-save-equipment').addEventListener('click', confirmEquipmentSelection);
+document.getElementById('btn-save-equipment-models').addEventListener('click', confirmEquipmentSelection);
 
 // 11. Поиск
 document.getElementById('search-watch').addEventListener('input', (e) => renderMyWatch(e.target.value));
@@ -392,7 +475,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   const savedRole = localStorage.getItem('eg_role');
   const savedEq = JSON.parse(localStorage.getItem('eg_equipment') || '[]');
   if (savedRole && savedEq.length === 0) {
-    renderEquipmentList();
+    renderEquipmentCategories();
     showScreen('screen-equipment');
   } else if (savedRole && savedEq.length > 0) {
     renderMyWatch();
