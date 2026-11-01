@@ -19,107 +19,14 @@
       "categoryId": "main_engine",
       "manufacturer": "MAN B&W",
       "model": "6S60ME-C",
-      "type": "ME-C",
+      "type": "ME-C (Electronic)",
       "overview": {
-        "mcr": "14 940 kW @ 105 rpm (уточнить по судну)",
+        "mcr": "13560 kW @ 105 rpm",
         "bore": "600 mm",
         "stroke": "2400 mm",
         "firingOrder": "1-5-3-4-2-6"
       },
-      "procedures": [
-        {
-          "id": "exhaust_valve_overhaul",
-          "name": "Exhaust Valve Overhaul",
-          "parts": [
-            { "name": "Spindle guide sealing ring", "action": "replace", "criteria": "every overhaul" },
-            { "name": "Valve seat", "action": "inspect", "criteria": "replace if pitting > 0.5 mm (typical)" }
-          ],
-          "clearances": [
-            { "name": "Valve spindle guide clearance", "min": "0.10", "max": "0.18", "unit": "mm", "note": "Typical for ME-C; verify with manual" }
-          ],
-          "torques": [
-            { "name": "Exhaust valve stud, screwing in", "value": "680", "unit": "Nm", "source": "MAN manual excerpt (plate T22-45)" }
-          ],
-          "steps": [
-            "Cool down engine to < 60 °C",
-            "Shut off air supply to exhaust valve (only with stopped LO pumps)",
-            "Engage turning gear",
-            "Shut off cooling water and fuel oil",
-            "Stop lubricating oil supply",
-            "Lock turbocharger rotors",
-            "Shut down hydraulic power supply"
-          ]
-        },
-        {
-          "id": "cylinder_cover_overhaul",
-          "name": "Cylinder Cover Overhaul",
-          "parts": [
-            { "name": "Cylinder cover stud", "action": "check", "criteria": "check distance 126–132 mm" }
-          ],
-          "clearances": [],
-          "torques": [
-            { "name": "Cylinder cover stud (hydraulic tightening)", "value": "per MAN tightening table", "unit": "Nm", "note": "Exact Nm not found in public sources; use multi-jack tool per manual" }
-          ],
-          "steps": [
-            "Clean sealing surfaces",
-            "Mount gasket (mild steel ring)",
-            "Mount cylinder cover",
-            "Tighten upper water connections",
-            "Tighten cover studs with hydraulic tool in cross pattern (3 stages)"
-          ]
-        },
-        {
-          "id": "piston_overhaul",
-          "name": "Piston Overhaul",
-          "parts": [
-            { "name": "Piston rings (top, 2nd, 3rd, oil ring)", "action": "replace", "criteria": "at each piston overhaul" }
-          ],
-          "clearances": [
-            { "name": "Top ring groove side clearance", "min": "as new", "max": "+0.15 to +0.20", "unit": "mm", "note": "Max increase over new; source: Doosan 6S60ME-C8.5 service data" },
-            { "name": "Cylinder liner max wear", "min": "—", "max": "4.0–4.5 mm (or 0.6–0.75% of bore)", "unit": "mm", "note": "At TDC of top ring; typical wear rate 0.05–0.1 mm/1000 h" }
-          ],
-          "torques": [],
-          "steps": [
-            "Withdraw piston with controlled lifting tool",
-            "Inspect piston crown for cracks",
-            "Measure ring groove clearances",
-            "Renew all rings",
-            "Lubricate liner and insert piston",
-            "Mount piston cleaning ring"
-          ]
-        },
-        {
-          "id": "cylinder_liner_inspection",
-          "name": "Cylinder Liner Inspection",
-          "parts": [],
-          "clearances": [
-            { "name": "Liner wear (max)", "min": "—", "max": "4.0–4.5 mm", "unit": "mm", "note": "Measure at 8 positions per cylinder (source: 8S80MC-C8 inspection checklist, applicable principle)" }
-          ],
-          "torques": [],
-          "steps": [
-            "Clean liner surface",
-            "Measure wear at multiple positions (fore-aft, port-stbd)",
-            "Check for scoring, cavitation, cold corrosion",
-            "Record in log"
-          ]
-        },
-        {
-          "id": "crankshaft_deflection",
-          "name": "Crankshaft Deflection Measurement",
-          "parts": [],
-          "clearances": [
-            { "name": "Crank web deflection (example for S46MC-C)", "min": "—", "max": "0.23 / 0.46 / 0.62 / 0.69 / 0.93 mm", "unit": "mm", "note": "Values depend on crank number and engine type; 6S60ME-C values must be taken from manual plate 70816 or equivalent" }
-          ],
-          "torques": [],
-          "steps": [
-            "Ensure engine is cold and at rest",
-            "Fit dial gauge in punch marks on crank webs",
-            "Turn engine 360° and record readings at each position (BDC, 90°, TDC, 270°)",
-            "Compare with manual limits",
-            "If values exceed limits, investigate bearing wear or foundation"
-          ]
-        }
-      ]
+      "procedures": []
     },
     {
       "id": "man_8s80mc_c",
@@ -128,147 +35,13 @@
       "model": "8S80MC-C",
       "type": "MC-C",
       "overview": {
-        "mcr": "25 080 kW @ 68 rpm (or 81 600 kW @ 78 rpm for C8 version — verify)",
+        "mcr": "25080 kW @ 68 rpm",
         "bore": "800 mm",
-        "stroke": "3056 mm (or 3200 mm for C8)",
+        "stroke": "3056 mm",
         "firingOrder": "1-8-3-4-7-2-5-6"
       },
-      "procedures": [
-        {
-          "id": "exhaust_valve_overhaul",
-          "name": "Exhaust Valve Overhaul",
-          "parts": [
-            { "name": "Valve spindle", "action": "inspect", "criteria": "replace if worn > maker limit" }
-          ],
-          "clearances": [],
-          "torques": [],
-          "steps": [
-            "Cool down engine",
-            "Isolate exhaust valve air supply",
-            "Remove valve housing nuts",
-            "Lift out valve complete",
-            "Overhaul according to MAN work card"
-          ]
-        },
-        {
-          "id": "piston_overhaul",
-          "name": "Piston Overhaul",
-          "parts": [
-            { "name": "Piston rings", "action": "replace", "criteria": "every overhaul" }
-          ],
-          "clearances": [
-            { "name": "Max ring groove clearance (80 bore)", "min": "—", "max": "1.0", "unit": "mm", "note": "Source: Riviera article on MC/MC-C piston overhauls" }
-          ],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "crankshaft_deflection",
-          "name": "Crankshaft Deflection",
-          "parts": [],
-          "clearances": [],
-          "torques": [],
-          "steps": [
-            "Use dial gauge in punch marks",
-            "Record readings",
-            "Compare with MAN limits (typically 0.5–0.8 mm depending on crank)"
-          ]
-        }
-      ]
+      "procedures": []
     },
-    {
-      "id": "sulzer_rta96c",
-      "categoryId": "main_engine",
-      "manufacturer": "Sulzer",
-      "model": "RTA96C",
-      "type": "RTA",
-      "overview": {
-        "mcr": "65 000 kW @ 102 rpm (typical for 12-cyl; verify)",
-        "bore": "960 mm",
-        "stroke": "2500 mm"
-      },
-      "procedures": [
-        {
-          "id": "exhaust_valve_overhaul",
-          "name": "Exhaust Valve Overhaul",
-          "parts": [
-            { "name": "Exhaust valve (Nimonic 80A)", "action": "inspect", "criteria": "replace if seat width or face wear exceeds limit" }
-          ],
-          "clearances": [],
-          "torques": [],
-          "steps": [
-            "Isolate valve actuator",
-            "Remove valve cage",
-            "Inspect valve face and seat",
-            "Lap or replace as needed"
-          ]
-        },
-        {
-          "id": "piston_overhaul",
-          "name": "Piston Overhaul",
-          "parts": [
-            { "name": "Piston rings", "action": "replace", "criteria": "at overhaul" }
-          ],
-          "clearances": [],
-          "torques": [],
-          "steps": [
-            "Withdraw piston",
-            "Clean and inspect crown",
-            "Renew rings",
-            "Check liner wear"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "man_7l27_38",
-      "categoryId": "aux_engine",
-      "manufacturer": "MAN B&W",
-      "model": "7L27/38",
-      "type": "L27/38",
-      "overview": {
-        "mcr": "2450 kW @ 750 rpm (Mk2)",
-        "bore": "270 mm",
-        "stroke": "380 mm",
-        "firingOrder": "1-2-4-6-7-5-3"
-      },
-      "procedures": [
-        {
-          "id": "valve_clearance_adjustment",
-          "name": "Valve Clearance Adjustment",
-          "parts": [],
-          "clearances": [
-            { "name": "Inlet valve clearance (cold, 20°C)", "min": "0.7", "max": "0.7", "unit": "mm", "source": "MAN Service Letter SL12-559/MIKA" },
-            { "name": "Exhaust valve clearance (cold, 20°C)", "min": "0.7", "max": "0.7", "unit": "mm", "source": "MAN Service Letter SL12-559/MIKA" }
-          ],
-          "torques": [],
-          "steps": [
-            "Ensure engine cold (20°C)",
-            "Remove valve cover",
-            "Measure clearance with feeler gauge",
-            "Adjust to 0.7 mm",
-            "Recheck after tightening locknut"
-          ]
-        },
-        {
-          "id": "cylinder_head_overhaul",
-          "name": "Cylinder Head Overhaul",
-          "parts": [
-            { "name": "Head gasket", "action": "replace", "criteria": "every overhaul" }
-          ],
-          "clearances": [],
-          "torques": [],
-          "steps": [
-            "Drain cooling water",
-            "Remove cylinder head bolts in reverse sequence",
-            "Lift head",
-            "Clean mating surfaces",
-            "Renew gasket",
-            "Tighten bolts in 3 stages per manual"
-          ]
-        }
-      ]
-},
     {
       "id": "man_6s90me",
       "categoryId": "main_engine",
@@ -276,189 +49,26 @@
       "model": "6S90ME",
       "type": "ME",
       "overview": {
+        "mcr": "Check manual",
         "bore": "900 mm",
-        "stroke": "Check manual",
-        "type": "ME (Electronic)"
+        "stroke": "Check manual"
       },
-      "procedures": [
-        {
-          "id": "cylinder_cover",
-          "name": "Cylinder Cover",
-          "parts": [
-            { "name": "Cylinder cover, complete", "action": "info", "criteria": "Weight: 8800 kg" },
-            { "name": "Cylinder cover without valves", "action": "info", "criteria": "Weight: 6300 kg" },
-            { "name": "Cooling jacket", "action": "info", "criteria": "Weight: 210 kg" },
-            { "name": "Exhaust valve stud", "action": "info", "criteria": "Weight: 200 kg" },
-            { "name": "Cylinder cover stud", "action": "info", "criteria": "Weight: 203 kg" }
-          ],
-          "clearances": [
-            { "name": "Cylinder cover stud, check distance", "min": "183", "max": "184", "unit": "mm" }
-          ],
-          "torques": [
-            { "name": "Exhaust valve stud, screwing-in", "value": "600", "unit": "Nm" },
-            { "name": "Starting valve stud, screwing-in", "value": "240", "unit": "Nm" },
-            { "name": "Fuel valve stud, screwing-in", "value": "140", "unit": "Nm" },
-            { "name": "Hydraulic pressure, mounting", "value": "2200", "unit": "bar" },
-            { "name": "Hydraulic pressure, dismantling", "value": "2000-2400", "unit": "bar" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "piston",
-          "name": "Piston & Rings",
-          "parts": [
-            { "name": "Piston complete", "action": "info", "criteria": "Weight: 5000 kg" },
-            { "name": "Piston crown", "action": "info", "criteria": "Weight: 1220 kg" },
-            { "name": "Piston rod", "action": "info", "criteria": "Weight: 3100 kg" },
-            { "name": "Piston skirt", "action": "info", "criteria": "Weight: 280 kg" },
-            { "name": "Piston rings", "action": "replace", "criteria": "Recommended whenever piston is removed" }
-          ],
-          "clearances": [
-            { "name": "Piston ring new, radial width", "min": "28", "max": "28", "unit": "mm" },
-            { "name": "Piston ring worn, min. radial width", "min": "24", "max": "-", "unit": "mm" },
-            { "name": "Groove No.1, max. vertical height", "min": "-", "max": "20.3", "unit": "mm" },
-            { "name": "Groove Nos. 2, 3 and 4, max. vertical height", "min": "-", "max": "15.8", "unit": "mm" },
-            { "name": "Piston ring No.1 new, height", "min": "19.4", "max": "19.4", "unit": "mm" },
-            { "name": "Piston rings Nos. 2, 3, 4 new, height", "min": "14.9", "max": "14.9", "unit": "mm" },
-            { "name": "Minimum free ring gap (before dismantling)", "min": "50", "max": "-", "unit": "mm" },
-            { "name": "Minimum ring gap, No.1 (new ring/new liner)", "min": "6.3", "max": "-", "unit": "mm" },
-            { "name": "Minimum ring gap, Nos. 2-4 (new ring/new liner)", "min": "4.5", "max": "-", "unit": "mm" },
-            { "name": "Vertical clearance, new parts", "min": "0.48", "max": "0.48", "unit": "mm" },
-            { "name": "Vertical clearance, worn parts, max.", "min": "-", "max": "0.97", "unit": "mm" },
-            { "name": "CPR ring CL groove, min. depth", "min": "2", "max": "-", "unit": "mm" },
-            { "name": "Piston top centre, max. burn-away", "min": "-", "max": "12", "unit": "mm" },
-            { "name": "Piston top outer ring area, max. burn-away", "min": "-", "max": "8", "unit": "mm" },
-            { "name": "Test pressure", "min": "7", "max": "7", "unit": "bar" }
-          ],
-          "torques": [
-            { "name": "Piston rod/crown stud, screwing-in", "value": "300", "unit": "Nm" },
-            { "name": "Piston skirt, tightening", "value": "380", "unit": "Nm" },
-            { "name": "Cooling oil pipe, tightening", "value": "190", "unit": "Nm" },
-            { "name": "Lifting tool, tightening", "value": "200", "unit": "Nm" },
-            { "name": "Cooling Insert, tightening + angle", "value": "10/75", "unit": "Nm/°" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "piston_rod_stuffing_box",
-          "name": "Piston Rod Stuffing Box",
-          "parts": [
-            { "name": "Stuffing box complete", "action": "info", "criteria": "Weight: 190 kg" },
-            { "name": "Stuffing box half", "action": "info", "criteria": "Weight: 56 kg" }
-          ],
-          "clearances": [
-            { "name": "Uppermost rings, ring-end clearance", "min": "4x6", "max": "4x6", "unit": "mm" },
-            { "name": "Lowermost rings, ring-end clearance", "min": "3x3", "max": "3x3", "unit": "mm" },
-            { "name": "Sealing ring springs new, free length", "min": "889", "max": "889", "unit": "mm" },
-            { "name": "Scraper ring springs new, free length", "min": "839", "max": "839", "unit": "mm" }
-          ],
-          "torques": [
-            { "name": "Stuffing box flange, outer screws", "value": "180", "unit": "Nm" },
-            { "name": "Stuffing box flange, inner screws", "value": "200", "unit": "Nm" },
-            { "name": "Stuffing box halves", "value": "80", "unit": "Nm" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "cylinder_liner",
-          "name": "Cylinder Liner & PC-ring",
-          "parts": [
-            { "name": "Cylinder liner, complete", "action": "info", "criteria": "Weight: 9100 kg" },
-            { "name": "Cooling jacket", "action": "info", "criteria": "Weight: 420 kg" },
-            { "name": "Piston cleaning ring", "action": "inspect", "criteria": "Replace if broken/cracked or wear deviation > 0.9mm" }
-          ],
-          "clearances": [
-            { "name": "Cylinder diameter, new", "min": "900", "max": "900", "unit": "mm" },
-            { "name": "Piston cleaning ring diameter, new", "min": "897.8", "max": "897.8", "unit": "mm" },
-            { "name": "PC-ring radial width, new", "min": "21.1", "max": "21.1", "unit": "mm" },
-            { "name": "PC-ring/Liner max. wear deviation", "min": "-", "max": "0.9", "unit": "mm" }
-          ],
-          "torques": [
-            { "name": "Lifting tool screws", "value": "200", "unit": "Nm" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "crosshead",
-          "name": "Crosshead & Guides",
-          "parts": [
-            { "name": "Crosshead bearing cap", "action": "info", "criteria": "Weight: 1285 kg" },
-            { "name": "Crosshead bearing shell, upper", "action": "info", "criteria": "Weight: 118 kg" },
-            { "name": "Crosshead bearing shell, lower", "action": "info", "criteria": "Weight: 190 kg" },
-            { "name": "Crosshead complete", "action": "info", "criteria": "Weight: 7300 kg" },
-            { "name": "Guide shoe", "action": "info", "criteria": "Weight: 964 kg" }
-          ],
-          "clearances": [
-            { "name": "Crosshead bearing, top clearance max", "min": "-", "max": "0.7", "unit": "mm" },
-            { "name": "Crosshead bearing, top clearance min", "min": "0.35", "max": "-", "unit": "mm" },
-            { "name": "Oil wedge length, L", "min": "20", "max": "-", "unit": "mm" },
-            { "name": "Piston in centre PF+PA (N - max)", "min": "-", "max": "0.95", "unit": "mm" },
-            { "name": "Piston in centre PF+PA (O - max)", "min": "-", "max": "1.45", "unit": "mm" },
-            { "name": "E+G, H+F (N - max)", "min": "-", "max": "0.65", "unit": "mm" },
-            { "name": "E+G, H+F (N - min)", "min": "0.2", "max": "-", "unit": "mm" },
-            { "name": "E+G, H+F (O - max)", "min": "-", "max": "0.95", "unit": "mm" },
-            { "name": "J+X, L+Y, K+X, M+Y (N - max)", "min": "-", "max": "1.2", "unit": "mm" },
-            { "name": "J+X, L+Y, K+X, M+Y (N - min)", "min": "0.6", "max": "-", "unit": "mm" },
-            { "name": "QF/QA (O - max)", "min": "-", "max": "0.8", "unit": "mm" },
-            { "name": "ZF/ZA (O - min)", "min": "6", "max": "-", "unit": "mm" },
-            { "name": "TF + TA", "min": "0.8", "max": "0.8", "unit": "mm" }
-          ],
-          "torques": [
-            { "name": "Thrust piece", "value": "450", "unit": "Nm" },
-            { "name": "Cooling oil outlet pipe", "value": "280", "unit": "Nm" },
-            { "name": "Guide strip screws", "value": "450", "unit": "Nm" },
-            { "name": "Telescopic pipe", "value": "280", "unit": "Nm" },
-            { "name": "Studs on crosshead", "value": "680", "unit": "Nm" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "crankpin_bearing",
-          "name": "Crankpin Bearing",
-          "parts": [
-            { "name": "Crankpin bearing cap complete", "action": "info", "criteria": "Weight: 805 kg" },
-            { "name": "Crankpin bearing, upper shell", "action": "info", "criteria": "Weight: 100 kg" },
-            { "name": "Crankpin bearing, lower shell", "action": "info", "criteria": "Weight: 75 kg" },
-            { "name": "Crankpin bearing cap + shell + studs", "action": "info", "criteria": "Weight: 990 kg" }
-          ],
-          "clearances": [
-            { "name": "Crankpin bearing clearance, max", "min": "-", "max": "0.85", "unit": "mm" },
-            { "name": "Crankpin bearing clearance, min", "min": "0.5", "max": "-", "unit": "mm" }
-          ],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "connecting_rod",
-          "name": "Connecting Rod",
-          "parts": [
-            { "name": "Connecting rod complete", "action": "info", "criteria": "Weight: 6100 kg" },
-            { "name": "Connecting rod without bearing caps", "action": "info", "criteria": "Weight: 5970 kg" },
-            { "name": "Connecting rod stud", "action": "info", "criteria": "Weight: 30 kg" }
-          ],
-          "clearances": [],
-          "torques": [
-            { "name": "Connecting rod studs, screwing-in", "value": "600", "unit": "Nm" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "main_bearing",
-          "name": "Main Bearing",
-          "parts": [
-            { "name": "Main bearing cap", "action": "info", "criteria": "Weight: 1527 kg" },
-            { "name": "Main bearing shell, upper", "action": "info", "criteria": "Weight: 89 kg" },
-            { "name": "Main bearing shell, lower", "action": "info", "criteria": "Weight: 95 kg" }
-          ],
-          "clearances": [
-            { "name": "Main bearing, top clearance max", "min": "-", "max": "0.70", "unit": "mm" },
-            { "name": "Main bearing, top clearance min", "min": "0.30", "max": "-", "unit": "mm" }
-          ],
-          "torques": [],
-          "steps": []
-        }
-      ]
-},
+      "procedures": []
+    },
+    {
+      "id": "man_6s50mc",
+      "categoryId": "main_engine",
+      "manufacturer": "MAN B&W",
+      "model": "6S50MC",
+      "type": "MC",
+      "overview": {
+        "mcr": "9480 kW @ 127 rpm",
+        "bore": "500 mm",
+        "stroke": "2000 mm",
+        "firingOrder": "1-5-3-4-2-6"
+      },
+      "procedures": []
+    },
     {
       "id": "man_6s50mc_c",
       "categoryId": "main_engine",
@@ -468,390 +78,734 @@
       "overview": {
         "mcr": "9480 kW @ 127 rpm",
         "bore": "500 mm",
-        "stroke": "2000 mm",
-        "firingOrder": "1-5-3-4-2-6"
+        "stroke": "2000 mm"
       },
-      "procedures": [
-        {
-          "id": "cylinder_cover",
-          "name": "Cylinder Cover",
-          "parts": [
-            { "name": "Exhaust valve stud", "action": "info", "criteria": "Screwing-in torque: 450 Nm" },
-            { "name": "Starting valve stud", "action": "info", "criteria": "Screwing-in torque: 140 Nm" },
-            { "name": "Fuel valve stud", "action": "info", "criteria": "Screwing-in torque: 140 Nm" }
-          ],
-          "clearances": [
-            { "name": "Cylinder cover stud, check distance", "min": "183", "max": "184", "unit": "mm" }
-          ],
-          "torques": [
-            { "name": "Cylinder cover stud (in frame)", "value": "200", "unit": "Nm", "note": "M48 thread" },
-            { "name": "Hydraulic pressure, mounting", "value": "1500", "unit": "bar" },
-            { "name": "Hydraulic pressure, dismantling", "value": "1500-1650", "unit": "bar" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "piston",
-          "name": "Piston & Rings",
-          "parts": [
-            { "name": "Piston rings", "action": "replace", "criteria": "Recommended whenever piston is removed" }
-          ],
-          "clearances": [
-            { "name": "Ring groove clearance, max. (all rings)", "min": "-", "max": "1.0", "unit": "mm", "note": "Source: Riviera Maritime Media" },
-            { "name": "Ring groove No.1 nominal height", "min": "12.7", "max": "12.7", "unit": "mm" },
-            { "name": "Ring groove No.2 nominal height", "min": "9.7", "max": "9.7", "unit": "mm" }
-          ],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "stuffing_box",
-          "name": "Piston Rod Stuffing Box",
-          "parts": [
-            { "name": "Stuffing box complete", "action": "info", "criteria": "Weight: 109 kg" },
-            { "name": "Stuffing box half", "action": "info", "criteria": "Weight: 35 kg" }
-          ],
-          "clearances": [],
-          "torques": [
-            { "name": "Stuffing box valve, tightening", "value": "80", "unit": "Nm" },
-            { "name": "Stuffing box flange, tightening", "value": "80", "unit": "Nm" },
-            { "name": "Stuffing box flange, inner screws", "value": "80", "unit": "Nm" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "crosshead",
-          "name": "Crosshead & Guides",
-          "parts": [
-            { "name": "Crosshead bearing cap", "action": "info", "criteria": "Weight: 170 kg" },
-            { "name": "Crosshead + piston assembly", "action": "info", "criteria": "Weight: 1400 kg" },
-            { "name": "Bearing shell (lower)", "action": "info", "criteria": "Weight: 30 kg" }
-          ],
-          "clearances": [
-            { "name": "Crosshead bearing, top clearance max.", "min": "-", "max": "0.55", "unit": "mm" },
-            { "name": "Crosshead bearing, top clearance min.", "min": "0.20", "max": "-", "unit": "mm" },
-            { "name": "Oil wedge length, L", "min": "10", "max": "-", "unit": "mm" }
-          ],
-          "torques": [
-            { "name": "Piston rod/crosshead, tightening", "value": "430", "unit": "Nm" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "crankpin_bearing",
-          "name": "Crankpin Bearing",
-          "parts": [],
-          "clearances": [],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "connecting_rod",
-          "name": "Connecting Rod",
-          "parts": [],
-          "clearances": [],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "main_bearing",
-          "name": "Main Bearing",
-          "parts": [],
-          "clearances": [
-            { "name": "Crankshaft deflection, first & last cylinder", "min": "-", "max": "0.46", "unit": "mm" },
-            { "name": "Crankshaft deflection, other cylinders", "min": "-", "max": "0.18", "unit": "mm" }
-          ],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "cylinder_liner",
-          "name": "Cylinder Liner",
-          "parts": [],
-          "clearances": [
-            { "name": "Liner wear, max.", "min": "-", "max": "0.8% of bore (4.0 mm)", "unit": "mm", "note": "Typical wear limit; normal wear rate 0.01–0.03 mm/1000h" }
-          ],
-          "torques": [],
-          "steps": []
-        }
-      ]
+      "procedures": []
     },
-        {
-      "id": "man_me_c",
+    {
+      "id": "man_7s50mc_c",
       "categoryId": "main_engine",
       "manufacturer": "MAN B&W",
-      "model": "ME/ME-C Series",
-      "type": "ME-C (Electronic)",
+      "model": "7S50MC-C",
+      "type": "MC-C",
       "overview": {
-        "bore": "50-108 cm (depending on model)",
-        "stroke": "Variable",
-        "type": "Two-stroke, electronically controlled"
+        "mcr": "11060 kW @ 127 rpm",
+        "bore": "500 mm",
+        "stroke": "2000 mm"
       },
-      "procedures": [
-        {
-          "id": "cylinder_cover",
-          "name": "Cylinder Cover",
-          "parts": [
-            { "name": "Cylinder cover, complete", "action": "info", "criteria": "Weight: 11000 kg (or 1200 kg for smaller variants)" },
-            { "name": "Cylinder cover without valves", "action": "info", "criteria": "Weight: 7600 kg (or 1090 kg)" },
-            { "name": "Cooling jacket", "action": "info", "criteria": "Weight: 310 kg (or 40 kg)" }
-          ],
-          "clearances": [
-            { "name": "Cylinder cover stud, check distance", "min": "196.5", "max": "197.5", "unit": "mm", "note": "Data D01-05 (variant T22-44: 126-132 mm)" }
-          ],
-          "torques": [
-            { "name": "Exhaust valve stud, screwing-in", "value": "600", "unit": "Nm", "note": "Data D01-01 (variant T22-45: 680 Nm)" },
-            { "name": "Starting valve stud, screwing-in", "value": "110", "unit": "Nm", "note": "Data D01-02 (variant T22-51: 145 Nm)" },
-            { "name": "Fuel valve stud, screwing-in", "value": "140", "unit": "Nm", "note": "Data D01-03" },
-            { "name": "Hydraulic pressure, mounting", "value": "2200", "unit": "bar", "note": "Data D13-01" },
-            { "name": "Hydraulic pressure, dismantling", "value": "2000-2400", "unit": "bar", "note": "Data D13-02" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "piston",
-          "name": "Piston & Rings",
-          "parts": [
-            { "name": "Piston rings", "action": "replace", "criteria": "Recommended whenever piston is removed" }
-          ],
-          "clearances": [
-            { "name": "Max. recommended ring groove clearance (80/90 bore)", "min": "-", "max": "1.0", "unit": "mm", "note": "Source: Riviera Maritime Media (CBO strategy)" },
-            { "name": "Max. recommended ring groove clearance (98 bore)", "min": "-", "max": "1.1", "unit": "mm", "note": "Source: Riviera Maritime Media" },
-            { "name": "Max. hot corrosion on piston top centre (80 bore)", "min": "-", "max": "9", "unit": "mm", "note": "Source: Riviera Maritime Media" },
-            { "name": "Max. hot corrosion on piston top centre (90 bore)", "min": "-", "max": "12", "unit": "mm", "note": "Source: Riviera Maritime Media" },
-            { "name": "Max. hot corrosion on piston top centre (98 bore)", "min": "-", "max": "15", "unit": "mm", "note": "Source: Riviera Maritime Media" }
-          ],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "piston_rod_stuffing_box",
-          "name": "Piston Rod Stuffing Box",
-          "parts": [
-            { "name": "Stuffing box complete", "action": "info", "criteria": "Weight: 300 kg" },
-            { "name": "Stuffing box half", "action": "info", "criteria": "Weight: 105 kg" }
-          ],
-          "clearances": [
-            { "name": "Uppermost scraper ring, ring-end clearance", "min": "4x6", "max": "4x6", "unit": "mm", "note": "Data D02-29" },
-            { "name": "Lowermost scraper ring, ring-end clearance", "min": "3x3", "max": "3x3", "unit": "mm", "note": "Data D02-30" },
-            { "name": "Spring free length, six uppermost", "min": "889", "max": "889", "unit": "mm", "note": "Data D02-34" },
-            { "name": "Spring free length, four lowermost", "min": "839", "max": "839", "unit": "mm", "note": "Data D02-38" }
-          ],
-          "torques": [],
-          "steps": []
-        }
-      ]
+      "procedures": []
     },
-        {
-      "id": "man_6s60me_c",
+    {
+      "id": "man_6s46mc_c",
       "categoryId": "main_engine",
       "manufacturer": "MAN B&W",
-      "model": "6S60ME-C",
-      "type": "ME-C (Electronic)",
+      "model": "6S46MC-C",
+      "type": "MC-C",
+      "overview": {
+        "mcr": "7800 kW @ 129 rpm",
+        "bore": "460 mm",
+        "stroke": "1932 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "man_5s60mc_c",
+      "categoryId": "main_engine",
+      "manufacturer": "MAN B&W",
+      "model": "5S60MC-C",
+      "type": "MC-C",
+      "overview": {
+        "mcr": "11300 kW @ 105 rpm",
+        "bore": "600 mm",
+        "stroke": "2400 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "man_6g60me_c",
+      "categoryId": "main_engine",
+      "manufacturer": "MAN B&W",
+      "model": "6G60ME-C",
+      "type": "ME-C (LPG)",
       "overview": {
         "mcr": "13560 kW @ 105 rpm",
         "bore": "600 mm",
-        "stroke": "2400 mm",
-        "firingOrder": "1-5-3-4-2-6"
+        "stroke": "2400 mm"
       },
-      "procedures": [
-        {
-          "id": "cylinder_cover",
-          "name": "Cylinder Cover",
-          "parts": [
-            { "name": "Cylinder cover, complete", "action": "info", "criteria": "Weight: 1200 kg" },
-            { "name": "Cylinder cover without valves", "action": "info", "criteria": "Weight: 1090 kg" },
-            { "name": "Cooling jacket", "action": "info", "criteria": "Weight: 40 kg" },
-            { "name": "Exhaust valve stud", "action": "info", "criteria": "Weight: 8 kg" },
-            { "name": "Cylinder cover stud", "action": "info", "criteria": "Weight: 28 kg" }
-          ],
-          "clearances": [
-            { "name": "Cylinder cover stud, check distance", "min": "126", "max": "132", "unit": "mm", "note": "Data T22-44" }
-          ],
-          "torques": [
-            { "name": "Exhaust valve stud, screwing-in", "value": "680", "unit": "Nm", "note": "Data T22-45" },
-            { "name": "Starting valve stud, screwing-in", "value": "145", "unit": "Nm", "note": "Data T22-51" },
-            { "name": "Cylinder cover stud (in frame)", "value": "200", "unit": "Nm", "note": "Thread M48" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "piston",
-          "name": "Piston & Rings",
-          "parts": [
-            { "name": "Piston rings", "action": "replace", "criteria": "Recommended whenever piston is removed" }
-          ],
-          "clearances": [
-            { "name": "Max. recommended ring groove clearance (80/90 bore)", "min": "-", "max": "1.0", "unit": "mm", "note": "Source: Riviera Maritime Media" },
-            { "name": "Max. hot corrosion on piston top centre (80/90 bore)", "min": "-", "max": "9 / 12", "unit": "mm", "note": "For 80 and 90 bore respectively" }
-          ],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "piston_rod_stuffing_box",
-          "name": "Piston Rod Stuffing Box",
-          "parts": [],
-          "clearances": [],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "crosshead",
-          "name": "Crosshead & Guides",
-          "parts": [],
-          "clearances": [
-            { "name": "Crosshead bearing, top clearance max.", "min": "-", "max": "0.5", "unit": "mm", "note": "Data T25-12" },
-            { "name": "Crosshead bearing, top clearance min.", "min": "0.15", "max": "-", "unit": "mm", "note": "Data T25-13" }
-          ],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "crankpin_bearing",
-          "name": "Crankpin Bearing",
-          "parts": [],
-          "clearances": [],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "connecting_rod",
-          "name": "Connecting Rod",
-          "parts": [],
-          "clearances": [],
-          "torques": [
-            { "name": "Connecting rod stud, pretension", "value": "2120", "unit": "Nm", "note": "Elongation: 0.28–0.32 mm. Replace if elongation > 0.35 mm" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "main_bearing",
-          "name": "Main Bearing",
-          "parts": [
-            { "name": "Main bearing cap", "action": "info", "criteria": "Weight: 2 x 600 kg" },
-            { "name": "Main bearing shell, upper", "action": "info", "criteria": "Weight: 177 kg" },
-            { "name": "Main bearing shell, lower", "action": "info", "criteria": "Weight: 177 kg" }
-          ],
-          "clearances": [
-            { "name": "Main bearing, top clearance max.", "min": "-", "max": "0.45", "unit": "mm", "note": "Data D05-01" },
-            { "name": "Main bearing, top clearance min.", "min": "0.20", "max": "-", "unit": "mm", "note": "Data D05-02" }
-          ],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "cylinder_liner",
-          "name": "Cylinder Liner",
-          "parts": [],
-          "clearances": [
-            { "name": "Liner wear limit (0.6–0.8% of bore)", "min": "3.6", "max": "4.8", "unit": "mm", "note": "For 600 mm bore" }
-          ],
-          "torques": [],
-          "steps": []
-        }
-      ]
+      "procedures": []
     },
-        {
-      "id": "stx_man_6s50mc",
+    {
+      "id": "man_7g80me_c",
       "categoryId": "main_engine",
       "manufacturer": "MAN B&W",
-      "model": "6S50MC",
-      "type": "MC (Camshaft-controlled)",
+      "model": "7G80ME-C",
+      "type": "ME-C (LPG)",
       "overview": {
-        "mcr": "9480 kW @ 127 rpm",
-        "bore": "500 mm",
-        "stroke": "2000 mm",
-        "firingOrder": "1-5-3-4-2-6"
+        "mcr": "28000 kW @ 72 rpm",
+        "bore": "800 mm",
+        "stroke": "3200 mm"
       },
-      "procedures": [
-        {
-          "id": "cylinder_cover",
-          "name": "Cylinder Cover",
-          "parts": [
-            { "name": "Cylinder cover, complete", "action": "inspect", "criteria": "Check for cracks, water leaks, exhaust valve seat condition" },
-            { "name": "Exhaust valve stud", "action": "info", "criteria": "Screwing-in torque: 450 Nm" },
-            { "name": "Starting valve stud", "action": "info", "criteria": "Screwing-in torque: 140 Nm" },
-            { "name": "Fuel valve stud", "action": "info", "criteria": "Screwing-in torque: 140 Nm" }
-          ],
-          "clearances": [
-            { "name": "Cylinder cover stud, check distance", "min": "183", "max": "184", "unit": "mm", "note": "Nominal protrusion height" }
-          ],
-          "torques": [
-            { "name": "Cylinder cover stud (in frame)", "value": "200", "unit": "Nm", "note": "M48 thread, pre-tensioning" },
-            { "name": "Hydraulic pressure, mounting", "value": "1500", "unit": "bar", "note": "For final tightening of cover nuts" },
-            { "name": "Hydraulic pressure, dismantling", "value": "1500-1650", "unit": "bar", "note": "For loosening cover nuts" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "piston",
-          "name": "Piston & Rings",
-          "parts": [
-            { "name": "Piston crown", "action": "info", "criteria": "Weight: 220-225 kg, height: 267-272 mm" },
-            { "name": "Piston rings", "action": "replace", "criteria": "Recommended whenever piston is removed" }
-          ],
-          "clearances": [
-            { "name": "Ring groove No.1 nominal height", "min": "12.5", "max": "12.5", "unit": "mm", "note": "CPR type, chrome-plated" },
-            { "name": "Ring groove Nos. 2, 3, 4 nominal height", "min": "9.5", "max": "9.5", "unit": "mm", "note": "Oblique cut type" },
-            { "name": "Max. recommended ring groove clearance (all rings)", "min": "-", "max": "1.0", "unit": "mm", "note": "Wear limit for axial clearance" },
-            { "name": "CPR ring CL groove, min. remaining depth", "min": "1", "max": "-", "unit": "mm", "note": "If less, crown must be reconditioned" }
-          ],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "crosshead",
-          "name": "Crosshead & Guides",
-          "parts": [
-            { "name": "Crosshead bearing shell", "action": "inspect", "criteria": "Replace if wear exceeds limits or white metal damaged" }
-          ],
-          "clearances": [
-            { "name": "Crosshead bearing, top clearance max.", "min": "-", "max": "0.29", "unit": "mm", "note": "Wear limit" },
-            { "name": "Crosshead bearing, top clearance min.", "min": "0.17", "max": "-", "unit": "mm", "note": "New/nominal value" },
-            { "name": "Oil wedge length, L", "min": "10", "max": "-", "unit": "mm", "note": "Wear limit is 50% reduction of L" }
-          ],
-          "torques": [
-            { "name": "Crosshead bearing cap nuts (hydraulic)", "value": "1500-1650", "unit": "bar", "note": "Hydraulic loosening/tightening pressure" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "connecting_rod",
-          "name": "Connecting Rod",
-          "parts": [],
-          "clearances": [],
-          "torques": [],
-          "steps": []
-        },
-        {
-          "id": "main_bearing",
-          "name": "Main Bearing",
-          "parts": [
-            { "name": "Main bearing shell, upper", "action": "inspect", "criteria": "Check for wear, scoring, white metal condition" },
-            { "name": "Main bearing shell, lower", "action": "inspect", "criteria": "Check for wear, scoring, white metal condition" }
-          ],
-          "clearances": [
-            { "name": "Main bearing, top clearance (nominal range)", "min": "0.23", "max": "0.47", "unit": "mm", "note": "Reference values for S50MC-C; max wear limit 0.70 mm" },
-            { "name": "Main bearing, max. permissible clearance", "min": "-", "max": "0.70", "unit": "mm", "note": "Absolute wear limit before renewal" }
-          ],
-          "torques": [
-            { "name": "Main bearing cap studs, pre-tightening", "value": "50", "unit": "Nm", "note": "With Loctite 243" }
-          ],
-          "steps": []
-        },
-        {
-          "id": "cylinder_liner",
-          "name": "Cylinder Liner",
-          "parts": [],
-          "clearances": [
-            { "name": "Normal wear rate (chrome-plated liner)", "min": "0.01", "max": "0.03", "unit": "mm/1000h", "note": "Average expected wear" },
-            { "name": "Wear limit", "min": "0.4", "max": "0.8", "unit": "% of bore", "note": "For 500 mm bore = 2.0 – 4.0 mm" }
-          ],
-          "torques": [],
-          "steps": []
-        }
-      ]
+      "procedures": []
+    },
+    {
+      "id": "wartsila_rt_flex50",
+      "categoryId": "main_engine",
+      "manufacturer": "Wärtsilä",
+      "model": "RT-flex50",
+      "type": "RT-flex",
+      "overview": {
+        "mcr": "15000 kW @ 124 rpm",
+        "bore": "500 mm",
+        "stroke": "2050 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "wartsila_rt_flex58",
+      "categoryId": "main_engine",
+      "manufacturer": "Wärtsilä",
+      "model": "RT-flex58",
+      "type": "RT-flex",
+      "overview": {
+        "mcr": "21000 kW @ 105 rpm",
+        "bore": "580 mm",
+        "stroke": "2416 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "wartsila_x62",
+      "categoryId": "main_engine",
+      "manufacturer": "Wärtsilä",
+      "model": "X62",
+      "type": "X",
+      "overview": {
+        "mcr": "25000 kW @ 100 rpm",
+        "bore": "620 mm",
+        "stroke": "2700 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "wartsila_x72",
+      "categoryId": "main_engine",
+      "manufacturer": "Wärtsilä",
+      "model": "X72",
+      "type": "X",
+      "overview": {
+        "mcr": "35000 kW @ 90 rpm",
+        "bore": "720 mm",
+        "stroke": "3100 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "sulzer_rta96c",
+      "categoryId": "main_engine",
+      "manufacturer": "Sulzer",
+      "model": "RTA96C",
+      "type": "RTA",
+      "overview": {
+        "mcr": "65000 kW @ 102 rpm",
+        "bore": "960 mm",
+        "stroke": "2500 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "sulzer_rta84t",
+      "categoryId": "main_engine",
+      "manufacturer": "Sulzer",
+      "model": "RTA84T",
+      "type": "RTA",
+      "overview": {
+        "mcr": "45000 kW @ 76 rpm",
+        "bore": "840 mm",
+        "stroke": "2400 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "hyundai_hims_6s60me_c",
+      "categoryId": "main_engine",
+      "manufacturer": "Hyundai",
+      "model": "HIMS 6S60ME-C",
+      "type": "ME-C",
+      "overview": {
+        "mcr": "13560 kW @ 105 rpm",
+        "bore": "600 mm",
+        "stroke": "2400 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "hyundai_hims_7s50mc_c",
+      "categoryId": "main_engine",
+      "manufacturer": "Hyundai",
+      "model": "HIMS 7S50MC-C",
+      "type": "MC-C",
+      "overview": {
+        "mcr": "11060 kW @ 127 rpm",
+        "bore": "500 mm",
+        "stroke": "2000 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "kawasaki_man_6s60me_c",
+      "categoryId": "main_engine",
+      "manufacturer": "Kawasaki",
+      "model": "MAN 6S60ME-C",
+      "type": "ME-C",
+      "overview": {
+        "mcr": "13560 kW @ 105 rpm",
+        "bore": "600 mm",
+        "stroke": "2400 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "kawasaki_man_8s80mc_c",
+      "categoryId": "main_engine",
+      "manufacturer": "Kawasaki",
+      "model": "MAN 8S80MC-C",
+      "type": "MC-C",
+      "overview": {
+        "mcr": "25080 kW @ 68 rpm",
+        "bore": "800 mm",
+        "stroke": "3056 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "wartsila_6l20",
+      "categoryId": "aux_engine",
+      "manufacturer": "Wärtsilä",
+      "model": "6L20",
+      "type": "L20",
+      "overview": {
+        "mcr": "1080 kW @ 1000 rpm",
+        "bore": "200 mm",
+        "stroke": "280 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "wartsila_8l20",
+      "categoryId": "aux_engine",
+      "manufacturer": "Wärtsilä",
+      "model": "8L20",
+      "type": "L20",
+      "overview": {
+        "mcr": "1440 kW @ 1000 rpm",
+        "bore": "200 mm",
+        "stroke": "280 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "wartsila_6l32",
+      "categoryId": "aux_engine",
+      "manufacturer": "Wärtsilä",
+      "model": "6L32",
+      "type": "L32",
+      "overview": {
+        "mcr": "3000 kW @ 750 rpm",
+        "bore": "320 mm",
+        "stroke": "400 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "man_7l27_38",
+      "categoryId": "aux_engine",
+      "manufacturer": "MAN B&W",
+      "model": "7L27/38",
+      "type": "L27/38",
+      "overview": {
+        "mcr": "2450 kW @ 750 rpm",
+        "bore": "270 mm",
+        "stroke": "380 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "man_6l23_30",
+      "categoryId": "aux_engine",
+      "manufacturer": "MAN B&W",
+      "model": "6L23/30",
+      "type": "L23/30",
+      "overview": {
+        "mcr": "960 kW @ 720 rpm",
+        "bore": "225 mm",
+        "stroke": "300 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "man_8l23_30",
+      "categoryId": "aux_engine",
+      "manufacturer": "MAN B&W",
+      "model": "8L23/30",
+      "type": "L23/30",
+      "overview": {
+        "mcr": "1280 kW @ 720 rpm",
+        "bore": "225 mm",
+        "stroke": "300 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "yanmar_6n21",
+      "categoryId": "aux_engine",
+      "manufacturer": "Yanmar",
+      "model": "6N21",
+      "type": "N21",
+      "overview": {
+        "mcr": "800 kW @ 900 rpm",
+        "bore": "210 mm",
+        "stroke": "290 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "yanmar_6n18",
+      "categoryId": "aux_engine",
+      "manufacturer": "Yanmar",
+      "model": "6N18",
+      "type": "N18",
+      "overview": {
+        "mcr": "600 kW @ 900 rpm",
+        "bore": "180 mm",
+        "stroke": "250 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "cummins_qsk60",
+      "categoryId": "aux_engine",
+      "manufacturer": "Cummins",
+      "model": "QSK60",
+      "type": "QSK",
+      "overview": {
+        "mcr": "2000 kW @ 1800 rpm",
+        "bore": "159 mm",
+        "stroke": "190 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "caterpillar_3516",
+      "categoryId": "aux_engine",
+      "manufacturer": "Caterpillar",
+      "model": "3516",
+      "type": "3516",
+      "overview": {
+        "mcr": "2000 kW @ 1800 rpm",
+        "bore": "170 mm",
+        "stroke": "190 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "caterpillar_3512",
+      "categoryId": "aux_engine",
+      "manufacturer": "Caterpillar",
+      "model": "3512",
+      "type": "3512",
+      "overview": {
+        "mcr": "1500 kW @ 1800 rpm",
+        "bore": "170 mm",
+        "stroke": "190 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "aalborg_av6",
+      "categoryId": "aux_boiler",
+      "manufacturer": "Aalborg",
+      "model": "AV6",
+      "type": "AV",
+      "overview": {
+        "capacity": "6000 kg/h",
+        "pressure": "7 bar"
+      },
+      "procedures": []
+    },
+    {
+      "id": "aalborg_av8",
+      "categoryId": "aux_boiler",
+      "manufacturer": "Aalborg",
+      "model": "AV8",
+      "type": "AV",
+      "overview": {
+        "capacity": "8000 kg/h",
+        "pressure": "9 bar"
+      },
+      "procedures": []
+    },
+    {
+      "id": "mitsubishi_ub",
+      "categoryId": "aux_boiler",
+      "manufacturer": "Mitsubishi",
+      "model": "UB",
+      "type": "UB",
+      "overview": {
+        "capacity": "5000 kg/h",
+        "pressure": "7 bar"
+      },
+      "procedures": []
+    },
+    {
+      "id": "hamworthy_ht",
+      "categoryId": "aux_boiler",
+      "manufacturer": "Hamworthy",
+      "model": "HT",
+      "type": "HT",
+      "overview": {
+        "capacity": "4000 kg/h",
+        "pressure": "8 bar"
+      },
+      "procedures": []
+    },
+    {
+      "id": "alfa_laval_mopx_207",
+      "categoryId": "fo_purifier",
+      "manufacturer": "Alfa Laval",
+      "model": "MOPX 207",
+      "type": "MOPX",
+      "overview": {
+        "capacity": "7400 L/h",
+        "bowlSpeed": "6400 rpm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "alfa_laval_mopx_213",
+      "categoryId": "fo_purifier",
+      "manufacturer": "Alfa Laval",
+      "model": "MOPX 213",
+      "type": "MOPX",
+      "overview": {
+        "capacity": "13000 L/h",
+        "bowlSpeed": "5800 rpm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "mitsubishi_sj_30g",
+      "categoryId": "fo_purifier",
+      "manufacturer": "Mitsubishi",
+      "model": "SJ-30G",
+      "type": "SJ",
+      "overview": {
+        "capacity": "2950 L/h",
+        "bowlSpeed": "10000 rpm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "westfalia_otc_20",
+      "categoryId": "fo_purifier",
+      "manufacturer": "GEA Westfalia",
+      "model": "OTC 20",
+      "type": "OTC",
+      "overview": {
+        "capacity": "5000 L/h",
+        "bowlSpeed": "6500 rpm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "alfa_laval_lopx_707",
+      "categoryId": "lo_purifier",
+      "manufacturer": "Alfa Laval",
+      "model": "LOPX 707",
+      "type": "LOPX",
+      "overview": {
+        "capacity": "3500 L/h",
+        "bowlSpeed": "6500 rpm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "mitsubishi_sj_20g",
+      "categoryId": "lo_purifier",
+      "manufacturer": "Mitsubishi",
+      "model": "SJ-20G",
+      "type": "SJ",
+      "overview": {
+        "capacity": "1800 L/h",
+        "bowlSpeed": "10000 rpm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "alfa_laval_jwp_26",
+      "categoryId": "fw_gen",
+      "subtype": "Plate",
+      "manufacturer": "Alfa Laval",
+      "model": "JWP-26",
+      "type": "JWP",
+      "overview": {
+        "capacity": "20 t/day"
+      },
+      "procedures": []
+    },
+    {
+      "id": "alfa_laval_jwp_36",
+      "categoryId": "fw_gen",
+      "subtype": "Plate",
+      "manufacturer": "Alfa Laval",
+      "model": "JWP-36",
+      "type": "JWP",
+      "overview": {
+        "capacity": "30 t/day"
+      },
+      "procedures": []
+    },
+    {
+      "id": "hamworthy_uwc",
+      "categoryId": "fw_gen",
+      "subtype": "Tube",
+      "manufacturer": "Hamworthy",
+      "model": "UWC",
+      "type": "UWC",
+      "overview": {
+        "capacity": "20 t/day"
+      },
+      "procedures": []
+    },
+    {
+      "id": "sasakura_fw",
+      "categoryId": "fw_gen",
+      "subtype": "Tube",
+      "manufacturer": "Sasakura",
+      "model": "FW",
+      "type": "FW",
+      "overview": {
+        "capacity": "15 t/day"
+      },
+      "procedures": []
+    },
+    {
+      "id": "mitsubishi_sj_30g_steering",
+      "categoryId": "steering_gear",
+      "manufacturer": "Mitsubishi",
+      "model": "SJ-30G",
+      "type": "SJ",
+      "overview": {
+        "torque": "300 kNm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "hamworthy_hsg",
+      "categoryId": "steering_gear",
+      "manufacturer": "Hamworthy",
+      "model": "HSG",
+      "type": "HSG",
+      "overview": {
+        "torque": "250 kNm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "roller_vane",
+      "categoryId": "steering_gear",
+      "manufacturer": "Roller Vane",
+      "model": "RV",
+      "type": "RV",
+      "overview": {
+        "torque": "200 kNm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "sperre_hl2_105",
+      "categoryId": "air_compressor",
+      "manufacturer": "Sperre",
+      "model": "HL2/105",
+      "type": "HL",
+      "overview": {
+        "capacity": "105 m³/h",
+        "pressure": "30 bar"
+      },
+      "procedures": []
+    },
+    {
+      "id": "sperre_hl2_160",
+      "categoryId": "air_compressor",
+      "manufacturer": "Sperre",
+      "model": "HL2/160",
+      "type": "HL",
+      "overview": {
+        "capacity": "160 m³/h",
+        "pressure": "30 bar"
+      },
+      "procedures": []
+    },
+    {
+      "id": "hatlapa_lh",
+      "categoryId": "air_compressor",
+      "manufacturer": "Hatlapa",
+      "model": "LH",
+      "type": "LH",
+      "overview": {
+        "capacity": "120 m³/h",
+        "pressure": "30 bar"
+      },
+      "procedures": []
+    },
+    {
+      "id": "tanabe_h_63",
+      "categoryId": "air_compressor",
+      "manufacturer": "Tanabe",
+      "model": "H-63",
+      "type": "H",
+      "overview": {
+        "capacity": "63 m³/h",
+        "pressure": "30 bar"
+      },
+      "procedures": []
+    },
+    {
+      "id": "allweiler_pump",
+      "categoryId": "pump",
+      "manufacturer": "Allweiler",
+      "model": "Pump",
+      "type": "Centrifugal",
+      "overview": {
+        "capacity": "100 m³/h",
+        "head": "30 m"
+      },
+      "procedures": []
+    },
+    {
+      "id": "shinko_pump",
+      "categoryId": "pump",
+      "manufacturer": "Shinko",
+      "model": "Pump",
+      "type": "Centrifugal",
+      "overview": {
+        "capacity": "80 m³/h",
+        "head": "25 m"
+      },
+      "procedures": []
+    },
+    {
+      "id": "iwaki_pump",
+      "categoryId": "pump",
+      "manufacturer": "Iwaki",
+      "model": "Pump",
+      "type": "Centrifugal",
+      "overview": {
+        "capacity": "60 m³/h",
+        "head": "20 m"
+      },
+      "procedures": []
+    },
+    {
+      "id": "atlas_incinerator",
+      "categoryId": "incinerator",
+      "manufacturer": "Atlas Incinerator",
+      "model": "A",
+      "type": "A",
+      "overview": {
+        "capacity": "50 kg/h"
+      },
+      "procedures": []
+    },
+    {
+      "id": "teamtec_incinerator",
+      "categoryId": "incinerator",
+      "manufacturer": "TeamTec",
+      "model": "T",
+      "type": "T",
+      "overview": {
+        "capacity": "60 kg/h"
+      },
+      "procedures": []
+    },
+    {
+      "id": "hamworthy_incinerator",
+      "categoryId": "incinerator",
+      "manufacturer": "Hamworthy",
+      "model": "H",
+      "type": "H",
+      "overview": {
+        "capacity": "40 kg/h"
+      },
+      "procedures": []
+    },
+    {
+      "id": "hamworthy_ows",
+      "categoryId": "ows",
+      "manufacturer": "Hamworthy",
+      "model": "OWS",
+      "type": "OWS",
+      "overview": {
+        "capacity": "5 m³/h",
+        "alarm": "15 ppm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "mitsubishi_ows",
+      "categoryId": "ows",
+      "manufacturer": "Mitsubishi",
+      "model": "OWS",
+      "type": "OWS",
+      "overview": {
+        "capacity": "3 m³/h",
+        "alarm": "15 ppm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "vnad_ows",
+      "categoryId": "ows",
+      "manufacturer": "VNAD",
+      "model": "OWS",
+      "type": "OWS",
+      "overview": {
+        "capacity": "2 m³/h",
+        "alarm": "15 ppm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "hamworthy_sewage",
+      "categoryId": "sewage_plant",
+      "manufacturer": "Hamworthy",
+      "model": "ST",
+      "type": "ST",
+      "overview": {
+        "capacity": "20 persons"
+      },
+      "procedures": []
+    },
+    {
+      "id": "mitsubishi_sewage",
+      "categoryId": "sewage_plant",
+      "manufacturer": "Mitsubishi",
+      "model": "S",
+      "type": "S",
+      "overview": {
+        "capacity": "15 persons"
+      },
+      "procedures": []
+    },
+    {
+      "id": "vnad_sewage",
+      "categoryId": "sewage_plant",
+      "manufacturer": "VNAD",
+      "model": "S",
+      "type": "S",
+      "overview": {
+        "capacity": "25 persons"
+      },
+      "procedures": []
     }
   ]
 }
