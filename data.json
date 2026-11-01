@@ -268,6 +268,87 @@
           ]
         }
       ]
+},
+    {
+      "id": "man_6s90me",
+      "categoryId": "main_engine",
+      "manufacturer": "MAN B&W",
+      "model": "6S90ME",
+      "type": "ME",
+      "overview": {
+        "mcr": "Check manual",
+        "bore": "900 mm",
+        "stroke": "Check manual"
+      },
+      "procedures": [
+        {
+          "id": "cylinder_cover_overhaul",
+          "name": "Cylinder Cover Overhaul",
+          "parts": [
+            { "name": "Cylinder cover complete", "action": "inspect", "criteria": "check for cracks" }
+          ],
+          "clearances": [
+            { "name": "Cylinder cover stud, check distance", "min": "183", "max": "184", "unit": "mm" }
+          ],
+          "torques": [
+            { "name": "Exhaust valve stud, screwing-in torque", "value": "600", "unit": "Nm" },
+            { "name": "Starting valve stud, screwing-in torque", "value": "240", "unit": "Nm" },
+            { "name": "Fuel valve stud, screwing-in torque", "value": "140", "unit": "Nm" }
+          ],
+          "steps": [
+            "Set blocking device on main starting valve to BLOCKED",
+            "Engage turning gear",
+            "Close fuel oil inlet valve",
+            "Close cooling water inlet and outlet valves, open drain cocks",
+            "Shut off air supply for pneumatic exhaust valve spring and vent system",
+            "Connect pressure gauge at minimess point 455, check pressure is zero"
+          ]
+        },
+        {
+          "id": "piston_overhaul",
+          "name": "Piston Overhaul",
+          "parts": [
+            { "name": "Piston ring", "action": "replace", "criteria": "Recommend replacing all when piston removed" },
+            { "name": "O-ring", "action": "replace", "criteria": "every overhaul" }
+          ],
+          "clearances": [
+            { "name": "Vertical clearance, worn parts, max.", "min": "-", "max": "0.97", "unit": "mm" },
+            { "name": "Piston ring new, radial width", "min": "28", "max": "28", "unit": "mm" },
+            { "name": "Piston ring worn, min. radial width", "min": "24", "max": "-", "unit": "mm" },
+            { "name": "Piston top centre, max. permissible burn-away", "min": "-", "max": "12", "unit": "mm" }
+          ],
+          "torques": [
+            { "name": "Piston rod/crown stud, screwing-in torque", "value": "300", "unit": "Nm" },
+            { "name": "Piston skirt, tightening torque", "value": "380", "unit": "Nm" },
+            { "name": "Cooling oil pipe, tightening torque", "value": "190", "unit": "Nm" }
+          ],
+          "steps": [
+            "Measure free ring gap of all piston rings before dismantling",
+            "Measure radial width of rings",
+            "Clean ring grooves and check for burn marks",
+            "Measure ring grooves with calliper gauge"
+          ]
+        },
+        {
+          "id": "crosshead_bearing",
+          "name": "Crosshead Bearing Check",
+          "parts": [],
+          "clearances": [
+            { "name": "Crosshead bearing, top clearance max.", "min": "-", "max": "0.7", "unit": "mm" },
+            { "name": "Crosshead bearing, top clearance min.", "min": "0.35", "max": "-", "unit": "mm" },
+            { "name": "Oil wedge length, L", "min": "20", "max": "20", "unit": "mm" }
+          ],
+          "torques": [
+            { "name": "Thrust piece, tightening torque", "value": "450", "unit": "Nm" }
+          ],
+          "steps": [
+            "Open crankcase door at relevant cylinder",
+            "Turn crankthrow to 90° before BDC on exhaust side",
+            "Measure clearance by inserting feeler gauge between bearing cap and crosshead journal",
+            "If difference between actual and recorded measurement exceeds 0.1 mm, disassemble for inspection"
+          ]
+        }
+      ]
     }
   ]
 }
