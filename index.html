@@ -10,8 +10,36 @@
 </head>
 <body>
   <main id="app">
-    <h1>EngineGuide</h1>
-    <p id="status">Loading…</p>
+    <!-- ЭКРАН 1: ОНБОРДИНГ -->
+    <section id="screen-onboarding" class="screen active">
+      <header class="onboarding-header">
+        <h1>EngineGuide</h1>
+        <p class="subtitle">Select your rank</p>
+      </header>
+      
+      <div class="role-list stagger-list">
+        <button class="role-card" data-role="chief">
+          <span class="role-title">Chief Engineer</span>
+          <span class="role-desc">Full access to all equipment</span>
+        </button>
+        <button class="role-card" data-role="2nd">
+          <span class="role-title">2nd Engineer</span>
+          <span class="role-desc">Main engine & auxiliary systems</span>
+        </button>
+        <button class="role-card" data-role="3rd">
+          <span class="role-title">3rd Engineer</span>
+          <span class="role-desc">Generators, boilers & purifiers</span>
+        </button>
+        <button class="role-card" data-role="4th">
+          <span class="role-title">4th Engineer</span>
+          <span class="role-desc">Pumps, compressors & separators</span>
+        </button>
+        <button class="role-card" data-role="cadet">
+          <span class="role-title">Cadet</span>
+          <span class="role-desc">Learning mode</span>
+        </button>
+      </div>
+    </section>
   </main>
   <script src="app.js"></script>
 </body>
