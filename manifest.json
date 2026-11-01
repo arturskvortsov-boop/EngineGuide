@@ -1,0 +1,19 @@
+{
+  "name": "EngineGuide",
+  "short_name": "EngineGuide",
+  "description": "Marine engineer's equipment reference",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0809",
+  "theme_color": "#0a0809",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

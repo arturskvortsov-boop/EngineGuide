@@ -323,3 +323,10 @@ window.addEventListener('DOMContentLoaded', async () => {
     showScreen('screen-watch');
   }
 });
+
+// 16. Регистрация Service Worker для offline-режима
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(err => console.warn('SW failed', err));
+  });
+}
