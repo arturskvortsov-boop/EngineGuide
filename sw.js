@@ -1,4 +1,4 @@
-const CACHE = 'eg-v5';
+const CACHE = 'eg-v6';
 const ASSETS = [
   './',
   './index.html',

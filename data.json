@@ -751,6 +751,107 @@
           "steps": []
         }
       ]
+    },
+        {
+      "id": "stx_man_6s50mc",
+      "categoryId": "main_engine",
+      "manufacturer": "MAN B&W",
+      "model": "6S50MC",
+      "type": "MC (Camshaft-controlled)",
+      "overview": {
+        "mcr": "9480 kW @ 127 rpm",
+        "bore": "500 mm",
+        "stroke": "2000 mm",
+        "firingOrder": "1-5-3-4-2-6"
+      },
+      "procedures": [
+        {
+          "id": "cylinder_cover",
+          "name": "Cylinder Cover",
+          "parts": [
+            { "name": "Cylinder cover, complete", "action": "inspect", "criteria": "Check for cracks, water leaks, exhaust valve seat condition" },
+            { "name": "Exhaust valve stud", "action": "info", "criteria": "Screwing-in torque: 450 Nm" },
+            { "name": "Starting valve stud", "action": "info", "criteria": "Screwing-in torque: 140 Nm" },
+            { "name": "Fuel valve stud", "action": "info", "criteria": "Screwing-in torque: 140 Nm" }
+          ],
+          "clearances": [
+            { "name": "Cylinder cover stud, check distance", "min": "183", "max": "184", "unit": "mm", "note": "Nominal protrusion height" }
+          ],
+          "torques": [
+            { "name": "Cylinder cover stud (in frame)", "value": "200", "unit": "Nm", "note": "M48 thread, pre-tensioning" },
+            { "name": "Hydraulic pressure, mounting", "value": "1500", "unit": "bar", "note": "For final tightening of cover nuts" },
+            { "name": "Hydraulic pressure, dismantling", "value": "1500-1650", "unit": "bar", "note": "For loosening cover nuts" }
+          ],
+          "steps": []
+        },
+        {
+          "id": "piston",
+          "name": "Piston & Rings",
+          "parts": [
+            { "name": "Piston crown", "action": "info", "criteria": "Weight: 220-225 kg, height: 267-272 mm" },
+            { "name": "Piston rings", "action": "replace", "criteria": "Recommended whenever piston is removed" }
+          ],
+          "clearances": [
+            { "name": "Ring groove No.1 nominal height", "min": "12.5", "max": "12.5", "unit": "mm", "note": "CPR type, chrome-plated" },
+            { "name": "Ring groove Nos. 2, 3, 4 nominal height", "min": "9.5", "max": "9.5", "unit": "mm", "note": "Oblique cut type" },
+            { "name": "Max. recommended ring groove clearance (all rings)", "min": "-", "max": "1.0", "unit": "mm", "note": "Wear limit for axial clearance" },
+            { "name": "CPR ring CL groove, min. remaining depth", "min": "1", "max": "-", "unit": "mm", "note": "If less, crown must be reconditioned" }
+          ],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "crosshead",
+          "name": "Crosshead & Guides",
+          "parts": [
+            { "name": "Crosshead bearing shell", "action": "inspect", "criteria": "Replace if wear exceeds limits or white metal damaged" }
+          ],
+          "clearances": [
+            { "name": "Crosshead bearing, top clearance max.", "min": "-", "max": "0.29", "unit": "mm", "note": "Wear limit" },
+            { "name": "Crosshead bearing, top clearance min.", "min": "0.17", "max": "-", "unit": "mm", "note": "New/nominal value" },
+            { "name": "Oil wedge length, L", "min": "10", "max": "-", "unit": "mm", "note": "Wear limit is 50% reduction of L" }
+          ],
+          "torques": [
+            { "name": "Crosshead bearing cap nuts (hydraulic)", "value": "1500-1650", "unit": "bar", "note": "Hydraulic loosening/tightening pressure" }
+          ],
+          "steps": []
+        },
+        {
+          "id": "connecting_rod",
+          "name": "Connecting Rod",
+          "parts": [],
+          "clearances": [],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "main_bearing",
+          "name": "Main Bearing",
+          "parts": [
+            { "name": "Main bearing shell, upper", "action": "inspect", "criteria": "Check for wear, scoring, white metal condition" },
+            { "name": "Main bearing shell, lower", "action": "inspect", "criteria": "Check for wear, scoring, white metal condition" }
+          ],
+          "clearances": [
+            { "name": "Main bearing, top clearance (nominal range)", "min": "0.23", "max": "0.47", "unit": "mm", "note": "Reference values for S50MC-C; max wear limit 0.70 mm" },
+            { "name": "Main bearing, max. permissible clearance", "min": "-", "max": "0.70", "unit": "mm", "note": "Absolute wear limit before renewal" }
+          ],
+          "torques": [
+            { "name": "Main bearing cap studs, pre-tightening", "value": "50", "unit": "Nm", "note": "With Loctite 243" }
+          ],
+          "steps": []
+        },
+        {
+          "id": "cylinder_liner",
+          "name": "Cylinder Liner",
+          "parts": [],
+          "clearances": [
+            { "name": "Normal wear rate (chrome-plated liner)", "min": "0.01", "max": "0.03", "unit": "mm/1000h", "note": "Average expected wear" },
+            { "name": "Wear limit", "min": "0.4", "max": "0.8", "unit": "% of bore", "note": "For 500 mm bore = 2.0 – 4.0 mm" }
+          ],
+          "torques": [],
+          "steps": []
+        }
+      ]
     }
   ]
 }
