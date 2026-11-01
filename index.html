@@ -74,8 +74,44 @@
         <!-- Сюда JS вставит карточки выбранного оборудования -->
       </div>
     </section>
-  </main>
-    <!-- НИЖНЕЕ МЕНЮ НАВИГАЦИИ (появляется только в главных экранах) -->
+
+    <!-- ЭКРАН 4: БИБЛИОТЕКА -->
+    <section id="screen-library" class="screen">
+      <header class="screen-header">
+        <div>
+          <h2 class="screen-title">Library</h2>
+          <p class="subtitle">All equipment</p>
+        </div>
+      </header>
+      <div class="search-container">
+        <input type="text" id="search-library" class="search-input" placeholder="Search all equipment...">
+      </div>
+      <div id="library-list" class="equipment-list" style="padding-bottom: 100px;">
+        <!-- Сюда JS вставит карточки -->
+      </div>
+    </section>
+
+    <!-- ЭКРАН 5: ДЕТАЛИ ДВИГАТЕЛЯ -->
+    <section id="screen-engine" class="screen">
+      <header class="screen-header" style="margin-bottom: 12px;">
+        <button class="btn-back" onclick="showScreen('screen-watch')">← Back</button>
+      </header>
+      <div id="engine-details-content">
+        <!-- Сюда JS вставит инфу о двигателе и список процедур -->
+      </div>
+    </section>
+
+    <!-- ЭКРАН 6: ДЕТАЛИ ПРОЦЕДУРЫ -->
+    <section id="screen-procedure" class="screen">
+      <header class="screen-header" style="margin-bottom: 12px;">
+        <button class="btn-back" onclick="backToEngine()">← Back</button>
+      </header>
+      <div id="procedure-details-content">
+        <!-- Сюда JS вставит вкладки и данные -->
+      </div>
+    </section>
+
+  <!-- НИЖНЕЕ МЕНЮ НАВИГАЦИИ (появляется только в главных экранах) -->
   <nav id="bottom-nav" class="bottom-nav" style="display: none;">
     <button class="nav-btn active" data-target="screen-watch">
       <span class="nav-icon">◈</span>
@@ -86,6 +122,7 @@
       <span class="nav-label">Library</span>
     </button>
   </nav>
+  </main>
   <script src="app.js"></script>
 </body>
 </html>
