@@ -575,6 +575,72 @@
           "steps": []
         }
       ]
+    },
+        {
+      "id": "man_me_c",
+      "categoryId": "main_engine",
+      "manufacturer": "MAN B&W",
+      "model": "ME/ME-C Series",
+      "type": "ME-C (Electronic)",
+      "overview": {
+        "bore": "50-108 cm (depending on model)",
+        "stroke": "Variable",
+        "type": "Two-stroke, electronically controlled"
+      },
+      "procedures": [
+        {
+          "id": "cylinder_cover",
+          "name": "Cylinder Cover",
+          "parts": [
+            { "name": "Cylinder cover, complete", "action": "info", "criteria": "Weight: 11000 kg (or 1200 kg for smaller variants)" },
+            { "name": "Cylinder cover without valves", "action": "info", "criteria": "Weight: 7600 kg (or 1090 kg)" },
+            { "name": "Cooling jacket", "action": "info", "criteria": "Weight: 310 kg (or 40 kg)" }
+          ],
+          "clearances": [
+            { "name": "Cylinder cover stud, check distance", "min": "196.5", "max": "197.5", "unit": "mm", "note": "Data D01-05 (variant T22-44: 126-132 mm)" }
+          ],
+          "torques": [
+            { "name": "Exhaust valve stud, screwing-in", "value": "600", "unit": "Nm", "note": "Data D01-01 (variant T22-45: 680 Nm)" },
+            { "name": "Starting valve stud, screwing-in", "value": "110", "unit": "Nm", "note": "Data D01-02 (variant T22-51: 145 Nm)" },
+            { "name": "Fuel valve stud, screwing-in", "value": "140", "unit": "Nm", "note": "Data D01-03" },
+            { "name": "Hydraulic pressure, mounting", "value": "2200", "unit": "bar", "note": "Data D13-01" },
+            { "name": "Hydraulic pressure, dismantling", "value": "2000-2400", "unit": "bar", "note": "Data D13-02" }
+          ],
+          "steps": []
+        },
+        {
+          "id": "piston",
+          "name": "Piston & Rings",
+          "parts": [
+            { "name": "Piston rings", "action": "replace", "criteria": "Recommended whenever piston is removed" }
+          ],
+          "clearances": [
+            { "name": "Max. recommended ring groove clearance (80/90 bore)", "min": "-", "max": "1.0", "unit": "mm", "note": "Source: Riviera Maritime Media (CBO strategy)" },
+            { "name": "Max. recommended ring groove clearance (98 bore)", "min": "-", "max": "1.1", "unit": "mm", "note": "Source: Riviera Maritime Media" },
+            { "name": "Max. hot corrosion on piston top centre (80 bore)", "min": "-", "max": "9", "unit": "mm", "note": "Source: Riviera Maritime Media" },
+            { "name": "Max. hot corrosion on piston top centre (90 bore)", "min": "-", "max": "12", "unit": "mm", "note": "Source: Riviera Maritime Media" },
+            { "name": "Max. hot corrosion on piston top centre (98 bore)", "min": "-", "max": "15", "unit": "mm", "note": "Source: Riviera Maritime Media" }
+          ],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "piston_rod_stuffing_box",
+          "name": "Piston Rod Stuffing Box",
+          "parts": [
+            { "name": "Stuffing box complete", "action": "info", "criteria": "Weight: 300 kg" },
+            { "name": "Stuffing box half", "action": "info", "criteria": "Weight: 105 kg" }
+          ],
+          "clearances": [
+            { "name": "Uppermost scraper ring, ring-end clearance", "min": "4x6", "max": "4x6", "unit": "mm", "note": "Data D02-29" },
+            { "name": "Lowermost scraper ring, ring-end clearance", "min": "3x3", "max": "3x3", "unit": "mm", "note": "Data D02-30" },
+            { "name": "Spring free length, six uppermost", "min": "889", "max": "889", "unit": "mm", "note": "Data D02-34" },
+            { "name": "Spring free length, four lowermost", "min": "839", "max": "839", "unit": "mm", "note": "Data D02-38" }
+          ],
+          "torques": [],
+          "steps": []
+        }
+      ]
     }
   ]
 }
