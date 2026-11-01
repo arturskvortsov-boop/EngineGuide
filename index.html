@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#0a0809">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -96,10 +96,18 @@
       </div>
     </section>
 
+    <!-- ЭКРАН 4.5: БИБЛИОТЕКА — УРОВЕНЬ ВЛОЖЕНИЯ (Производители / Модели / Подтипы) -->
+    <section id="screen-library-drill" class="screen">
+      <header class="screen-header" style="margin-bottom: 12px;">
+        <button class="btn-back" onclick="libraryBack()">← Back</button>
+      </header>
+      <div id="library-drill-content"></div>
+    </section>
+
     <!-- ЭКРАН 5: ДЕТАЛИ ДВИГАТЕЛЯ -->
     <section id="screen-engine" class="screen">
       <header class="screen-header" style="margin-bottom: 12px;">
-        <button class="btn-back" onclick="showScreen('screen-watch')">← Back</button>
+        <button class="btn-back" onclick="engineBack()">← Back</button>
       </header>
       <div id="engine-details-content">
         <!-- Сюда JS вставит инфу о двигателе и список процедур -->

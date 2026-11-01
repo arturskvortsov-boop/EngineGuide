@@ -1,11 +1,25 @@
 {
+  "categories": [
+    { "id": "main_engine", "name": "Main Engine" },
+    { "id": "aux_engine", "name": "Aux Engine (DG)" },
+    { "id": "aux_boiler", "name": "Aux Boiler" },
+    { "id": "fo_purifier", "name": "F.O. Purifier" },
+    { "id": "lo_purifier", "name": "L.O. Purifier" },
+    { "id": "fw_gen", "name": "Fresh Water Generator" },
+    { "id": "steering_gear", "name": "Steering Gear" },
+    { "id": "air_compressor", "name": "Air Compressor" },
+    { "id": "pump", "name": "Pump" },
+    { "id": "incinerator", "name": "Incinerator" },
+    { "id": "ows", "name": "OWS (15ppm)" },
+    { "id": "sewage_plant", "name": "Sewage Plant" }
+  ],
   "engines": [
     {
       "id": "man_6s60me_c",
+      "categoryId": "main_engine",
       "manufacturer": "MAN B&W",
       "model": "6S60ME-C",
       "type": "ME-C",
-      "vesselTypes": ["Capesize", "Panamax"],
       "overview": {
         "mcr": "14 280 kW @ 105 rpm",
         "bore": "600 mm",
@@ -38,11 +52,38 @@
       ]
     },
     {
+      "id": "man_8s80mc_c",
+      "categoryId": "main_engine",
+      "manufacturer": "MAN B&W",
+      "model": "8S80MC-C",
+      "type": "MC-C",
+      "overview": {
+        "mcr": "36 960 kW @ 78 rpm",
+        "bore": "800 mm",
+        "stroke": "3056 mm",
+        "firingOrder": "1-8-3-4-7-2-5-6"
+      },
+      "procedures": []
+    },
+    {
+      "id": "sulzer_rta96c",
+      "categoryId": "main_engine",
+      "manufacturer": "Sulzer",
+      "model": "RTA96C",
+      "type": "RTA",
+      "overview": {
+        "mcr": "65 000 kW @ 102 rpm",
+        "bore": "960 mm",
+        "stroke": "2500 mm"
+      },
+      "procedures": []
+    },
+    {
       "id": "wartsila_6l20",
+      "categoryId": "aux_engine",
       "manufacturer": "Wartsila",
       "model": "6L20",
-      "type": "Aux Engine",
-      "vesselTypes": ["General Cargo"],
+      "type": "L20",
       "overview": {
         "mcr": "1200 kW @ 1000 rpm",
         "bore": "200 mm",
@@ -51,33 +92,71 @@
       "procedures": []
     },
     {
-      "id": "alfa_laval_mopx",
+      "id": "man_7l27_38",
+      "categoryId": "aux_engine",
+      "manufacturer": "MAN B&W",
+      "model": "7L27/38",
+      "type": "L27/38",
+      "overview": {
+        "mcr": "2310 kW @ 800 rpm",
+        "bore": "270 mm",
+        "stroke": "380 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "alfa_laval_mopx_207",
+      "categoryId": "fo_purifier",
       "manufacturer": "Alfa Laval",
       "model": "MOPX 207",
-      "type": "Purifier",
-      "vesselTypes": ["All"],
+      "type": "MOPX",
       "overview": {
         "capacity": "3500 L/h"
       },
       "procedures": []
     },
     {
-      "id": "hamworthy_uwc",
-      "manufacturer": "Hamworthy",
-      "model": "UWC",
-      "type": "Fresh Water Gen",
-      "vesselTypes": ["All"],
+      "id": "alfa_laval_jwp26_plate",
+      "categoryId": "fw_gen",
+      "subtype": "Plate",
+      "manufacturer": "Alfa Laval",
+      "model": "JWP-26",
+      "type": "JWP",
       "overview": {
         "capacity": "20 t/day"
       },
       "procedures": []
     },
     {
-      "id": "mitsubishi_sj",
+      "id": "alfa_laval_jwp36_plate",
+      "categoryId": "fw_gen",
+      "subtype": "Plate",
+      "manufacturer": "Alfa Laval",
+      "model": "JWP-36",
+      "type": "JWP",
+      "overview": {
+        "capacity": "30 t/day"
+      },
+      "procedures": []
+    },
+    {
+      "id": "hamworthy_uwc_tube",
+      "categoryId": "fw_gen",
+      "subtype": "Tube",
+      "manufacturer": "Hamworthy",
+      "model": "UWC",
+      "type": "UWC",
+      "overview": {
+        "capacity": "20 t/day"
+      },
+      "procedures": []
+    },
+    {
+      "id": "mitsubishi_sj30g",
+      "categoryId": "steering_gear",
       "manufacturer": "Mitsubishi",
       "model": "SJ-30G",
-      "type": "Steering Gear",
-      "vesselTypes": ["Capesize"],
+      "type": "SJ",
       "overview": {
         "torque": "300 kNm"
       },
