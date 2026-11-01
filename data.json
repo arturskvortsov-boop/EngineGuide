@@ -276,77 +276,186 @@
       "model": "6S90ME",
       "type": "ME",
       "overview": {
-        "mcr": "Check manual",
         "bore": "900 mm",
-        "stroke": "Check manual"
+        "stroke": "Check manual",
+        "type": "ME (Electronic)"
       },
       "procedures": [
         {
-          "id": "cylinder_cover_overhaul",
-          "name": "Cylinder Cover Overhaul",
+          "id": "cylinder_cover",
+          "name": "Cylinder Cover",
           "parts": [
-            { "name": "Cylinder cover complete", "action": "inspect", "criteria": "check for cracks" }
+            { "name": "Cylinder cover, complete", "action": "info", "criteria": "Weight: 8800 kg" },
+            { "name": "Cylinder cover without valves", "action": "info", "criteria": "Weight: 6300 kg" },
+            { "name": "Cooling jacket", "action": "info", "criteria": "Weight: 210 kg" },
+            { "name": "Exhaust valve stud", "action": "info", "criteria": "Weight: 200 kg" },
+            { "name": "Cylinder cover stud", "action": "info", "criteria": "Weight: 203 kg" }
           ],
           "clearances": [
             { "name": "Cylinder cover stud, check distance", "min": "183", "max": "184", "unit": "mm" }
           ],
           "torques": [
-            { "name": "Exhaust valve stud, screwing-in torque", "value": "600", "unit": "Nm" },
-            { "name": "Starting valve stud, screwing-in torque", "value": "240", "unit": "Nm" },
-            { "name": "Fuel valve stud, screwing-in torque", "value": "140", "unit": "Nm" }
+            { "name": "Exhaust valve stud, screwing-in", "value": "600", "unit": "Nm" },
+            { "name": "Starting valve stud, screwing-in", "value": "240", "unit": "Nm" },
+            { "name": "Fuel valve stud, screwing-in", "value": "140", "unit": "Nm" },
+            { "name": "Hydraulic pressure, mounting", "value": "2200", "unit": "bar" },
+            { "name": "Hydraulic pressure, dismantling", "value": "2000-2400", "unit": "bar" }
           ],
-          "steps": [
-            "Set blocking device on main starting valve to BLOCKED",
-            "Engage turning gear",
-            "Close fuel oil inlet valve",
-            "Close cooling water inlet and outlet valves, open drain cocks",
-            "Shut off air supply for pneumatic exhaust valve spring and vent system",
-            "Connect pressure gauge at minimess point 455, check pressure is zero"
-          ]
+          "steps": []
         },
         {
-          "id": "piston_overhaul",
-          "name": "Piston Overhaul",
+          "id": "piston",
+          "name": "Piston & Rings",
           "parts": [
-            { "name": "Piston ring", "action": "replace", "criteria": "Recommend replacing all when piston removed" },
-            { "name": "O-ring", "action": "replace", "criteria": "every overhaul" }
+            { "name": "Piston complete", "action": "info", "criteria": "Weight: 5000 kg" },
+            { "name": "Piston crown", "action": "info", "criteria": "Weight: 1220 kg" },
+            { "name": "Piston rod", "action": "info", "criteria": "Weight: 3100 kg" },
+            { "name": "Piston skirt", "action": "info", "criteria": "Weight: 280 kg" },
+            { "name": "Piston rings", "action": "replace", "criteria": "Recommended whenever piston is removed" }
           ],
           "clearances": [
-            { "name": "Vertical clearance, worn parts, max.", "min": "-", "max": "0.97", "unit": "mm" },
             { "name": "Piston ring new, radial width", "min": "28", "max": "28", "unit": "mm" },
             { "name": "Piston ring worn, min. radial width", "min": "24", "max": "-", "unit": "mm" },
-            { "name": "Piston top centre, max. permissible burn-away", "min": "-", "max": "12", "unit": "mm" }
+            { "name": "Groove No.1, max. vertical height", "min": "-", "max": "20.3", "unit": "mm" },
+            { "name": "Groove Nos. 2, 3 and 4, max. vertical height", "min": "-", "max": "15.8", "unit": "mm" },
+            { "name": "Piston ring No.1 new, height", "min": "19.4", "max": "19.4", "unit": "mm" },
+            { "name": "Piston rings Nos. 2, 3, 4 new, height", "min": "14.9", "max": "14.9", "unit": "mm" },
+            { "name": "Minimum free ring gap (before dismantling)", "min": "50", "max": "-", "unit": "mm" },
+            { "name": "Minimum ring gap, No.1 (new ring/new liner)", "min": "6.3", "max": "-", "unit": "mm" },
+            { "name": "Minimum ring gap, Nos. 2-4 (new ring/new liner)", "min": "4.5", "max": "-", "unit": "mm" },
+            { "name": "Vertical clearance, new parts", "min": "0.48", "max": "0.48", "unit": "mm" },
+            { "name": "Vertical clearance, worn parts, max.", "min": "-", "max": "0.97", "unit": "mm" },
+            { "name": "CPR ring CL groove, min. depth", "min": "2", "max": "-", "unit": "mm" },
+            { "name": "Piston top centre, max. burn-away", "min": "-", "max": "12", "unit": "mm" },
+            { "name": "Piston top outer ring area, max. burn-away", "min": "-", "max": "8", "unit": "mm" },
+            { "name": "Test pressure", "min": "7", "max": "7", "unit": "bar" }
           ],
           "torques": [
-            { "name": "Piston rod/crown stud, screwing-in torque", "value": "300", "unit": "Nm" },
-            { "name": "Piston skirt, tightening torque", "value": "380", "unit": "Nm" },
-            { "name": "Cooling oil pipe, tightening torque", "value": "190", "unit": "Nm" }
+            { "name": "Piston rod/crown stud, screwing-in", "value": "300", "unit": "Nm" },
+            { "name": "Piston skirt, tightening", "value": "380", "unit": "Nm" },
+            { "name": "Cooling oil pipe, tightening", "value": "190", "unit": "Nm" },
+            { "name": "Lifting tool, tightening", "value": "200", "unit": "Nm" },
+            { "name": "Cooling Insert, tightening + angle", "value": "10/75", "unit": "Nm/°" }
           ],
-          "steps": [
-            "Measure free ring gap of all piston rings before dismantling",
-            "Measure radial width of rings",
-            "Clean ring grooves and check for burn marks",
-            "Measure ring grooves with calliper gauge"
-          ]
+          "steps": []
         },
         {
-          "id": "crosshead_bearing",
-          "name": "Crosshead Bearing Check",
-          "parts": [],
+          "id": "piston_rod_stuffing_box",
+          "name": "Piston Rod Stuffing Box",
+          "parts": [
+            { "name": "Stuffing box complete", "action": "info", "criteria": "Weight: 190 kg" },
+            { "name": "Stuffing box half", "action": "info", "criteria": "Weight: 56 kg" }
+          ],
           "clearances": [
-            { "name": "Crosshead bearing, top clearance max.", "min": "-", "max": "0.7", "unit": "mm" },
-            { "name": "Crosshead bearing, top clearance min.", "min": "0.35", "max": "-", "unit": "mm" },
-            { "name": "Oil wedge length, L", "min": "20", "max": "20", "unit": "mm" }
+            { "name": "Uppermost rings, ring-end clearance", "min": "4x6", "max": "4x6", "unit": "mm" },
+            { "name": "Lowermost rings, ring-end clearance", "min": "3x3", "max": "3x3", "unit": "mm" },
+            { "name": "Sealing ring springs new, free length", "min": "889", "max": "889", "unit": "mm" },
+            { "name": "Scraper ring springs new, free length", "min": "839", "max": "839", "unit": "mm" }
           ],
           "torques": [
-            { "name": "Thrust piece, tightening torque", "value": "450", "unit": "Nm" }
+            { "name": "Stuffing box flange, outer screws", "value": "180", "unit": "Nm" },
+            { "name": "Stuffing box flange, inner screws", "value": "200", "unit": "Nm" },
+            { "name": "Stuffing box halves", "value": "80", "unit": "Nm" }
           ],
-          "steps": [
-            "Open crankcase door at relevant cylinder",
-            "Turn crankthrow to 90° before BDC on exhaust side",
-            "Measure clearance by inserting feeler gauge between bearing cap and crosshead journal",
-            "If difference between actual and recorded measurement exceeds 0.1 mm, disassemble for inspection"
-          ]
+          "steps": []
+        },
+        {
+          "id": "cylinder_liner",
+          "name": "Cylinder Liner & PC-ring",
+          "parts": [
+            { "name": "Cylinder liner, complete", "action": "info", "criteria": "Weight: 9100 kg" },
+            { "name": "Cooling jacket", "action": "info", "criteria": "Weight: 420 kg" },
+            { "name": "Piston cleaning ring", "action": "inspect", "criteria": "Replace if broken/cracked or wear deviation > 0.9mm" }
+          ],
+          "clearances": [
+            { "name": "Cylinder diameter, new", "min": "900", "max": "900", "unit": "mm" },
+            { "name": "Piston cleaning ring diameter, new", "min": "897.8", "max": "897.8", "unit": "mm" },
+            { "name": "PC-ring radial width, new", "min": "21.1", "max": "21.1", "unit": "mm" },
+            { "name": "PC-ring/Liner max. wear deviation", "min": "-", "max": "0.9", "unit": "mm" }
+          ],
+          "torques": [
+            { "name": "Lifting tool screws", "value": "200", "unit": "Nm" }
+          ],
+          "steps": []
+        },
+        {
+          "id": "crosshead",
+          "name": "Crosshead & Guides",
+          "parts": [
+            { "name": "Crosshead bearing cap", "action": "info", "criteria": "Weight: 1285 kg" },
+            { "name": "Crosshead bearing shell, upper", "action": "info", "criteria": "Weight: 118 kg" },
+            { "name": "Crosshead bearing shell, lower", "action": "info", "criteria": "Weight: 190 kg" },
+            { "name": "Crosshead complete", "action": "info", "criteria": "Weight: 7300 kg" },
+            { "name": "Guide shoe", "action": "info", "criteria": "Weight: 964 kg" }
+          ],
+          "clearances": [
+            { "name": "Crosshead bearing, top clearance max", "min": "-", "max": "0.7", "unit": "mm" },
+            { "name": "Crosshead bearing, top clearance min", "min": "0.35", "max": "-", "unit": "mm" },
+            { "name": "Oil wedge length, L", "min": "20", "max": "-", "unit": "mm" },
+            { "name": "Piston in centre PF+PA (N - max)", "min": "-", "max": "0.95", "unit": "mm" },
+            { "name": "Piston in centre PF+PA (O - max)", "min": "-", "max": "1.45", "unit": "mm" },
+            { "name": "E+G, H+F (N - max)", "min": "-", "max": "0.65", "unit": "mm" },
+            { "name": "E+G, H+F (N - min)", "min": "0.2", "max": "-", "unit": "mm" },
+            { "name": "E+G, H+F (O - max)", "min": "-", "max": "0.95", "unit": "mm" },
+            { "name": "J+X, L+Y, K+X, M+Y (N - max)", "min": "-", "max": "1.2", "unit": "mm" },
+            { "name": "J+X, L+Y, K+X, M+Y (N - min)", "min": "0.6", "max": "-", "unit": "mm" },
+            { "name": "QF/QA (O - max)", "min": "-", "max": "0.8", "unit": "mm" },
+            { "name": "ZF/ZA (O - min)", "min": "6", "max": "-", "unit": "mm" },
+            { "name": "TF + TA", "min": "0.8", "max": "0.8", "unit": "mm" }
+          ],
+          "torques": [
+            { "name": "Thrust piece", "value": "450", "unit": "Nm" },
+            { "name": "Cooling oil outlet pipe", "value": "280", "unit": "Nm" },
+            { "name": "Guide strip screws", "value": "450", "unit": "Nm" },
+            { "name": "Telescopic pipe", "value": "280", "unit": "Nm" },
+            { "name": "Studs on crosshead", "value": "680", "unit": "Nm" }
+          ],
+          "steps": []
+        },
+        {
+          "id": "crankpin_bearing",
+          "name": "Crankpin Bearing",
+          "parts": [
+            { "name": "Crankpin bearing cap complete", "action": "info", "criteria": "Weight: 805 kg" },
+            { "name": "Crankpin bearing, upper shell", "action": "info", "criteria": "Weight: 100 kg" },
+            { "name": "Crankpin bearing, lower shell", "action": "info", "criteria": "Weight: 75 kg" },
+            { "name": "Crankpin bearing cap + shell + studs", "action": "info", "criteria": "Weight: 990 kg" }
+          ],
+          "clearances": [
+            { "name": "Crankpin bearing clearance, max", "min": "-", "max": "0.85", "unit": "mm" },
+            { "name": "Crankpin bearing clearance, min", "min": "0.5", "max": "-", "unit": "mm" }
+          ],
+          "torques": [],
+          "steps": []
+        },
+        {
+          "id": "connecting_rod",
+          "name": "Connecting Rod",
+          "parts": [
+            { "name": "Connecting rod complete", "action": "info", "criteria": "Weight: 6100 kg" },
+            { "name": "Connecting rod without bearing caps", "action": "info", "criteria": "Weight: 5970 kg" },
+            { "name": "Connecting rod stud", "action": "info", "criteria": "Weight: 30 kg" }
+          ],
+          "clearances": [],
+          "torques": [
+            { "name": "Connecting rod studs, screwing-in", "value": "600", "unit": "Nm" }
+          ],
+          "steps": []
+        },
+        {
+          "id": "main_bearing",
+          "name": "Main Bearing",
+          "parts": [
+            { "name": "Main bearing cap", "action": "info", "criteria": "Weight: 1527 kg" },
+            { "name": "Main bearing shell, upper", "action": "info", "criteria": "Weight: 89 kg" },
+            { "name": "Main bearing shell, lower", "action": "info", "criteria": "Weight: 95 kg" }
+          ],
+          "clearances": [
+            { "name": "Main bearing, top clearance max", "min": "-", "max": "0.70", "unit": "mm" },
+            { "name": "Main bearing, top clearance min", "min": "0.30", "max": "-", "unit": "mm" }
+          ],
+          "torques": [],
+          "steps": []
         }
       ]
     }
