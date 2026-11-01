@@ -1,0 +1,41 @@
+{
+  "engines": [
+    {
+      "id": "man_6s60me_c",
+      "manufacturer": "MAN B&W",
+      "model": "6S60ME-C",
+      "type": "ME-C",
+      "vesselTypes": ["Capesize", "Panamax"],
+      "overview": {
+        "mcr": "14 280 kW @ 105 rpm",
+        "bore": "600 mm",
+        "stroke": "2400 mm",
+        "firingOrder": "1-5-3-4-2-6"
+      },
+      "procedures": [
+        {
+          "id": "exhaust_valve_overhaul",
+          "name": "Exhaust Valve Overhaul",
+          "category": "cylinder_cover",
+          "parts": [
+            { "name": "Spindle guide sealing ring", "action": "replace", "criteria": "every overhaul" },
+            { "name": "Valve seat", "action": "inspect", "criteria": "replace if pitting > 0.5 mm" }
+          ],
+          "clearances": [
+            { "name": "Valve spindle guide clearance", "min": "0.10", "max": "0.18", "unit": "mm" },
+            { "name": "Valve seat contact width", "min": "2.0", "max": "2.5", "unit": "mm" }
+          ],
+          "torques": [
+            { "name": "Valve housing nuts", "value": "850", "unit": "Nm", "pattern": "cross, 3 stages" },
+            { "name": "Spindle guide bolts", "value": "120", "unit": "Nm" }
+          ],
+          "steps": [
+            "Cool down engine to < 60 °C",
+            "Close indicator cock, remove cap nut",
+            "Lift valve with hydraulic tool to 5 mm"
+          ]
+        }
+      ]
+    }
+  ]
+}
