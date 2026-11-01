@@ -36,6 +36,52 @@
           ]
         }
       ]
+    },
+    {
+      "id": "wartsila_6l20",
+      "manufacturer": "Wartsila",
+      "model": "6L20",
+      "type": "Aux Engine",
+      "vesselTypes": ["General Cargo"],
+      "overview": {
+        "mcr": "1200 kW @ 1000 rpm",
+        "bore": "200 mm",
+        "stroke": "280 mm"
+      },
+      "procedures": []
+    },
+    {
+      "id": "alfa_laval_mopx",
+      "manufacturer": "Alfa Laval",
+      "model": "MOPX 207",
+      "type": "Purifier",
+      "vesselTypes": ["All"],
+      "overview": {
+        "capacity": "3500 L/h"
+      },
+      "procedures": []
+    },
+    {
+      "id": "hamworthy_uwc",
+      "manufacturer": "Hamworthy",
+      "model": "UWC",
+      "type": "Fresh Water Gen",
+      "vesselTypes": ["All"],
+      "overview": {
+        "capacity": "20 t/day"
+      },
+      "procedures": []
+    },
+    {
+      "id": "mitsubishi_sj",
+      "manufacturer": "Mitsubishi",
+      "model": "SJ-30G",
+      "type": "Steering Gear",
+      "vesselTypes": ["Capesize"],
+      "overview": {
+        "torque": "300 kNm"
+      },
+      "procedures": []
     }
   ]
 }
